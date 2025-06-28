@@ -1,0 +1,25 @@
+---
+# --- checkov.yml - Configuration file for Checkov ---
+# --- Docs: https://www.checkov.io/3.Custom%20Policies/YAML%20Custom%20Policies.html ---
+
+# Automatically download external modules referenced in the code (e.g., Terraform Registry).
+download-external-modules: true
+
+# Evaluate variables during scanning (e.g., locals, TF vars).
+evaluate-variables: true
+
+# Do not include passed checks in the output.
+quiet: true
+
+# Only enable what we use to avoid unnecessary checks.
+framework:
+  - dockerfile
+  - github_actions
+  - github_configuration
+  - json
+  - openapi
+  - secrets
+  - serverless
+  - terraform
+  - terraform_plan
+  - yaml

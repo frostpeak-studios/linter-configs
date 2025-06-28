@@ -1,0 +1,40 @@
+# --- .sqlfluff - Configuration for SQLFluff linter ---
+# --- Docs: https://docs.sqlfluff.com/en/stable/configuration/setting_configuration.html#configuration-files ---
+
+# TODO: test and tweak this config
+
+# --- General Configuration ---
+
+[sqlfluff]
+
+# Supported dialects: https://docs.sqlfluff.com/en/stable/perma/dialects.html
+dialect = postgres
+max_line_length = 120
+
+# CPU processes to use while linting.
+# Use all processors but one. 0 means all CPUs.
+processes = -1
+
+# --- Rules ---
+
+# Use lowercase everywhere, as we don't uppercase keywords and such in
+# other programming languages, we rely on syntax highlighting.
+
+[sqlfluff:rules:capitalisation.keywords]
+capitalisation_policy = lower
+
+[sqlfluff:rules:capitalisation.identifiers]
+extended_capitalisation_policy = lower
+
+[sqlfluff:rules:capitalisation.functions]
+extended_capitalisation_policy = lower
+
+[sqlfluff:rules:capitalisation.literals]
+capitalisation_policy = lower
+
+[sqlfluff:rules:capitalisation.types]
+extended_capitalisation_policy = lower
+
+# Default to preferring the "c_style" (i.e. `!=`).
+[sqlfluff:rules:convention.not_equal]
+preferred_not_equal_style = c_style

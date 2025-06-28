@@ -1,0 +1,6 @@
+---
+# --- jsonlintrc.yml - Configuration file for JSON Lint ---
+# --- Docs: https://github.com/prantlf/jsonlint#configuration ---
+
+trailing-newline: true
+enforce-double-quotes: true

@@ -1,0 +1,9 @@
+{
+    "Globs": [
+        "**/.git/**",
+        "**/megalinter-reports/**",
+        "**/bin/**",
+        "**/build/**",
+        "**/obj/**"
+    ]
+}

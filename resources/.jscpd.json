@@ -1,0 +1,12 @@
+{
+    "threshold": 0,
+    "ignore": [
+        "**/*.md",
+        "**/.git/**",
+        "**/.github/**",
+        "**/.idea/**",
+        "**/node_modules/**",
+        "**/tests/**",
+        "**/valestyles/**"
+    ]
+}

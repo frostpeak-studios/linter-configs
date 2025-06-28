@@ -1,0 +1,6 @@
+{
+    "timeout": "15s",
+    "retryOn429": true,
+    "retryCount": 5,
+    "aliveStatusCodes": [200, 203, 206]
+}

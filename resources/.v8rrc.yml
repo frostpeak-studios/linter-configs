@@ -1,0 +1,10 @@
+---
+# --- .v8rrc.yml - Configuration for v8r ---
+# --- Docs: https://chris48s.github.io/v8r/configuration/ ---
+
+# Don't fail the check just because we didn't find a schema to validate against.
+# This will only fail the check if we found a schema and our config was invalid based on it.
+ignoreErrors: true
+
+# Keep the .ignore file in the config directory to avoid cluttering the project root.
+ignorePatternFiles: [".gitignore", ".v8rignore"]

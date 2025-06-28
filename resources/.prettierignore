@@ -1,0 +1,7 @@
+# --- .prettierignore - Whitelist for prettier ---
+# --- Docs: https://prettier.io/docs/ignore ---
+
+**/bin/**
+**/build/**
+**/obj/**
+**/valestyles/**

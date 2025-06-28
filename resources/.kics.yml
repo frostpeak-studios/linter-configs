@@ -1,0 +1,12 @@
+---
+# --- .kics.yml - Configuration for KICS scanner ---
+# --- Docs: https://docs.kics.io/latest/configuration-file/ ---
+
+exclude-paths:
+  - "megalinter-reports/"
+
+exclude-queries:
+  # We don't pin our actions to a specific SHA because we want to
+  # receive updates for them.
+  # https://docs.kics.io/latest/queries/cicd-queries/555ab8f9-2001-455e-a077-f2d0f41e2fb9/
+  - "555ab8f9-2001-455e-a077-f2d0f41e2fb9"

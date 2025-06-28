@@ -1,0 +1,59 @@
+# --- dictionary.txt - Custom cspell dictionary for Frostpeak Studios projects ---
+# --- Docs: https://cspell.org/docs/dictionaries/custom-dictionaries ---
+
+# --- General / Misc ---
+
+accessibilities
+finalizer
+finalizers
+misconfig
+pkgs
+uninstantiated
+
+# These two are from valestyles, and despite being ignored in the config,
+# are still caught in the scan from what looks like a cache file in MegaLinter's run.
+AMPM
+Uncomparables
+
+# --- C#/.NET ---
+
+Avalonia
+Blazor
+Encryptor
+Linq
+
+# --- Tools/Frameworks ---
+
+devskim
+Fmod
+KICS
+msbuild
+platyps
+psscriptanalyzer
+pwsh
+Qodana
+qodo
+tflint
+
+# --- File Types ---
+
+axaml
+dylib
+locproj
+nativeproj
+resx
+slnx
+
+csharpierignore
+jsonlintrc
+# .v8rignore triggers a false positive.
+rignore
+
+# --- Code ---
+
+cref
+lerp
+
+# .editorconfig rules
+lparen
+rparen

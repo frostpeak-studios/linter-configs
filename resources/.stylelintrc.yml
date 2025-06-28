@@ -1,0 +1,5 @@
+---
+# --- .stylelintrc.yml - Configuration for stylelint ---
+# --- Docs: https://stylelint.io/user-guide/configure/ ---
+
+extends: stylelint-config-standard

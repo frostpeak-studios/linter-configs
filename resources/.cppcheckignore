@@ -1,0 +1,14 @@
+# --- .cppcheckignore - Suppressions for cppcheck ---
+# --- Docs: https://cppcheck.sourceforge.io/manual.pdf (pg 18) ---
+
+*:*/_deps/*
+*:*/lib/*
+*:*/vendor/*
+*:*/ext/*
+*:*/external/*
+*:*/thirdparty/*
+*:*/third_party/*
+*:*/third-party/*
+*:*/3rdparty/*
+*:*/3rd_party/*
+*:*/3rd-party/*

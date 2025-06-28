@@ -1,0 +1,71 @@
+---
+# --- .cspell.config.yml - Configuration file for CSpell ---
+# --- Docs: https://cspell.org/docs/Configuration ---
+
+# --- Versioning ---
+
+$schema: "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json"
+version: "0.2"
+
+# --- Config properties ---
+
+# Include en-GB as some frameworks use its spelling.
+language: en, en-GB
+allowCompoundWords: true
+maxNumberOfProblems: 1000
+noConfigSearch: true
+useGitignore: true
+validateDirectives: true
+cache:
+  useCache: true
+  cacheStrategy: content
+
+# --- Dictionaries ---
+
+dictionaryDefinitions:
+  - name: dictionary
+    path: "dictionaries/en-base.txt"
+    addWords: true
+dictionaries:
+  - dictionary
+
+# --- Includes/Excludes ---
+
+enableFiletypes:
+  - csharp
+  - dotnet
+  - json
+  - markdown
+  - toml
+  - sql
+  - yaml
+
+files:
+  - ".github/**/*.{md,txt,yaml,yml}"
+  - ".git/COMMIT_EDITMSG"
+  - "*.{json,md,txt,yaml,yml}"
+  - "scripts/**"
+  - "src/**"
+  - "tests/**"
+
+ignorePaths:
+  - ".idea/**"
+  - ".vscode/**"
+  - "**/*.lock"
+  - "**/*.log"
+  - "**/.git/!(COMMIT_EDITMSG)"
+  - "**/.git/!(COMMIT_EDITMSG)/**"
+  - "**/.cspell.config.yml"
+  - "**/.gitignore"
+  - "**/.trivyignore"
+  # Despite useGitignore being enabled, this was still getting checked.
+  - "**/megalinter-reports/**"
+  - "**/node_modules/**"
+  - "**/bin/**"
+  - "**/build/**"
+  - "**/dist/**"
+  - "**/obj/**"
+  - "**/output/**"
+  - "**/valestyles/**"
+  # This has a bunch of intentionally misspelled words, different languages, etc.
+  - "**/Frostpeak.Testing/Data/**"

@@ -1,0 +1,16 @@
+# --- .gitleaks.toml - Configuration for gitleaks secret scanner ---
+# --- Docs: https://github.com/gitleaks/gitleaks/blob/master/config/gitleaks.toml ---
+
+title = "gitleaks config"
+
+# Use the default config, extend with our changes in this file.
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Allowlisted files"
+paths = [
+    "megalinter-reports",
+    # Testing data may include dummy keys.
+    "src/Frostpeak.Testing/Data"
+]

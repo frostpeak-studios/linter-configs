@@ -1,0 +1,5 @@
+# --- .markdownlintignore - Whitelist for markdownlint ---
+# --- Docs: https://github.com/igorshubovych/markdownlint-cli?tab=readme-ov-file#ignoring-files ---
+
+# Generated via vale sync.
+**/valestyles/**

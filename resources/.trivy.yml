@@ -1,0 +1,55 @@
+---
+# --- .trivy.yml - Configuration file for trivy vulnerability scanner --
+# --- Docs: https://trivy.dev/latest/docs/references/configuration/config-file/ ---
+
+# --- General Settings ---
+
+timeout: 5m0s
+exit-code: 1
+
+# --- Scan Configuration ---
+
+# Only enable the rules relevant to us to speed up the scan.
+enable-builtin-rules:
+  - "github-pat"
+  - "github-oauth"
+  - "github-app-token"
+  - "github-refresh-token"
+  - "github-fine-grained-pat"
+  - "private-key"
+  - "stripe-secret-token"
+  - "stripe-publishable-token"
+  - "discord-api-token"
+  - "discord-client-id"
+  - "discord-client-secret"
+  - "hashicorp-tf-api-token"
+  - "jwt-token"
+  - "postman-api-token"
+  - "dockerconfig-secret"
+severity:
+  - CRITICAL
+  - HIGH
+  - MEDIUM
+  - LOW
+  - UNKNOWN
+scan:
+  skip-dirs:
+    - "**/.terraform"
+  scanners:
+    - vuln
+    - misconfig
+    - secret
+pkg:
+  types:
+    - os
+    - library
+misconfiguration:
+  scanners:
+    - dockerfile
+    - terraform
+    - terraformplan-json
+    - terraformplan-snapshot
+  terraform:
+    exclude-downloaded-modules: false
+vulnerability:
+  ignore-unfixed: false
