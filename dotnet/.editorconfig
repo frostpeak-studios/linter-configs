@@ -1,23 +1,62 @@
-# --------------------------------------------------------------------------------------
-# --- .editorconfig - Enforce consistent coding style and formatting across .NET/C# projects
-# --- Docs: https://editorconfig.org/
-# ---
-# --- This contains an extensive collection of .NET code analysis rules, with the organizational
-# --- structure and IDs matching the .NET and Roslynator documentation for consistency.
-# --- See: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview?tabs=net-9
-# --- See: https://josefpihrt.github.io/docs/roslynator/category/code-analysis
-# ---
-# --- Rider will highlight many rules as not supported despite the editor correctly enforcing them.
-# --- See: https://youtrack.jetbrains.com/issue/RIDER-51400/Support-roslyn-properties-in-editorconfig
-# ---
-# --- Some of the rules here are JetBrains-specific and require Rider or the ReSharper VS plugin.
-# --- They are prefixed with either reshaper_ or ij_
-# --- These should be gracefully ignored in VS/Code.
-# --------------------------------------------------------------------------------------
+#  ╭──────────────────────────────────────────────────────────────────────────────────────────────╮
+#     .editorconfig - Enforce consistent coding style and formatting across .NET/C# projects
+#     Docs: https://editorconfig.org/
+#
+#     This contains an extensive collection of .NET code analysis rules, with the organizational
+#     structure and IDs matching the .NET and Roslynator documentation for consistency.
+#     See: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview?tabs=net-9
+#     See: https://josefpihrt.github.io/docs/roslynator/category/code-analysis
+#
+#     Rider will highlight many rules as not supported despite the editor correctly enforcing them.
+#     See: https://youtrack.jetbrains.com/issue/RIDER-51400/Support-roslyn-properties-in-editorconfig
+#
+#     Some of the rules here are JetBrains-specific and require Rider or the
+#     ReSharper VS plugin. They are prefixed with either reshaper_ or ij_
+#     These should be gracefully ignored in VS/Code.
+#  ╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+#
+#  ╭──────────────────────────────────────────────────────────────────────────────╮
+#     Table of Contents - EditorConfig Rules
+#  ╰──────────────────────────────────────────────────────────────────────────────╯
+#
+# ── Global Settings ───────────────────────────────────────────────────────────
+#    │
+#    ├── Basic Settings
+#    └── IntelliJ Settings
+#
+# ── Config Files (non-XML) ────────────────────────────────────────────────────
+#    │
+#    ├── EditorConfig Rules
+#    ├── Properties Rules
+#    ├── TOML Rules
+#    ├── JSON Rules
+#    └── YAML Rules
+#
+# ── Documentation ─────────────────────────────────────────────────────────────
+#    │
+#    └── Markdown Rules
+#
+# ── Scripting ────────────────────────────────────────────────────────────────
+#    │
+#    ├── PowerShell Rules
+#    └── Shell Script Rules
+#
+# ── XML/XAML/Avalonia XAML ─────────────────────────────────────────────────────
+#    │
+#    ├── XML Rules
+#    ├── XAML Rules
+#    └── Avalonia XAML Rules
+#
+# ── SQL ───────────────────────────────────────────────────────────────────────
+#    │
+#    ├── Formatting Rules
+#    └── Style Rules
+#
+# ── C#/.NET Rules ─────────────────────────────────────────────────────────────
+#    │
+#    └── See separate C#/.NET section
 
-# -------------------------------------------
-# ---       Global Settings               ---
-# -------------------------------------------
+# ── Global Settings ───────────────────────────────────────────────────────────
 
 # Top-most EditorConfig file.
 root = true
@@ -39,9 +78,7 @@ ij_visual_guides = 120
 ij_smart_tabs = false
 ij_wrap_on_typing = false
 
-# -------------------------------------------
-# ---      Config Files (non-XML)         ---
-# -------------------------------------------
+# ── Config Files (non-XML) ────────────────────────────────────────────────────
 
 [*.{yml,yaml,toml,json,ini,config,cfg,properties,editorconfig}]
 # Don't force wrapping, as it may break some attribute's values.
@@ -105,9 +142,7 @@ ij_yaml_space_before_colon = false
 ij_yaml_spaces_within_braces = true
 ij_yaml_spaces_within_brackets = true
 
-# -------------------------------------------
-# ---       Documentation                 ---
-# -------------------------------------------
+# ── Documentation ─────────────────────────────────────────────────────────────
 
 [{*.markdown,*.md}]
 ij_markdown_force_one_space_after_blockquote_symbol = true
@@ -127,9 +162,7 @@ ij_markdown_min_lines_between_paragraphs = 1
 ij_markdown_wrap_text_if_long = true
 ij_markdown_wrap_text_inside_blockquotes = true
 
-# -------------------------------------------
-# ---       Scripting                     ---
-# -------------------------------------------
+# ── Scripting ─────────────────────────────────────────────────────────────────
 
 # Shell
 [{*.bash,*.sh,*.zsh}]
@@ -248,9 +281,7 @@ ij_powershell_while_on_new_line = false
 ij_powershell_wrap_first_method_in_call_chain = false
 ij_powershell_wrap_long_lines = false
 
-# -------------------------------------------
-# ---       XML/XAML/Avalonia XAML        ---
-# -------------------------------------------
+# ── XML/XAML/Avalonia XAML ────────────────────────────────────────────────────
 
 [*.{axaml,xaml,xml,resx,props,manifest,csproj,sln,targets,nuspec}]
 # Don't force wrapping, as it may break some attribute's values.
@@ -287,36 +318,102 @@ ij_xml_space_inside_empty_tag = false
 ij_xml_text_wrap = normal
 ij_xml_use_custom_settings = false
 
-# -------------------------------------------
-# ---               SQL                   ---
-# -------------------------------------------
+# ── SQL ───────────────────────────────────────────────────────────────────────
 
 [*.sql]
 # TODO: add sql style rules
 
-# -------------------------------------------
-# ---           C#/.NET                   ---
-# -------------------------------------------
+# ══ C#/.NET ═══════════════════════════════════════════════════════════════════
 
-# The remainder of this config is dedicated to *.cs, do not add any other section headers below here.
-# This section follows the structure of the MS docs for .NET source code analysis.
-# Links to each section are provided for reference.
-# Any miscellaneous rules/styles that don't have a corresponding dotnet_diagnostic code are included at the bottom in the Misc rules section.
-# Changes to default values should be documented and include a justification comment, but some of these were
-# exported from an existing Rider config, so may be silently changed.
+#  ╭──────────────────────────────────────────────────────────────────────────────╮
+#     The remainder of this config is dedicated to *.cs, do not add any other
+#     section headers below here.
+#
+#     This section follows the structure of the MS docs for .NET source
+#     code analysis and the Roslynator code analysis reference.
+#
+#     Any miscellaneous rules/styles that don't have a corresponding
+#     dotnet_diagnostic code are included at the bottom in the Misc rules section.
+#
+#     Changes to default values should be documented and include a justification
+#     comment, but this is not guaranteed.
+#  ╰──────────────────────────────────────────────────────────────────────────────╯
+#
+#  ╭──────────────────────────────────────────────────────────────────────────────╮
+#     Table of Contents - C#/.NET Code Analysis Rules
+#  ╰──────────────────────────────────────────────────────────────────────────────╯
+#
+# C#/.NET
+# ├── Code Quality Rules ───────────────────────────────────────────────────────────
+# │   │
+# │   ├── Design Rules
+# │   ├── Documentation Rules
+# │   ├── Globalization Rules
+# │   ├── Portability Rules
+# │   ├── Maintainability Rules
+# │   ├── Naming Rules
+# │   ├── Performance Rules
+# │   ├── SingleFile Rules
+# │   ├── Reliability Rules
+# │   ├── Security Rules
+# │   └── Usage Rules
+# │
+# ├── Code Style Rules ────────────────────────────────────────────────────────────
+# │   │
+# │   ├── Language and unnecessary code rules
+# │   │   ├── using directive preferences
+# │   │   ├── Code-block preferences
+# │   │   ├── Expression-bodied members
+# │   │   ├── Expression-level preferences
+# │   │   ├── Field preferences
+# │   │   ├── Language keyword vs. framework types preferences
+# │   │   ├── Modifier preferences
+# │   │   ├── New-line preferences
+# │   │   ├── Null-checking preferences
+# │   │   ├── Parameter preferences
+# │   │   ├── Parentheses preferences
+# │   │   ├── Pattern-matching preferences
+# │   │   ├── Suppression preferences
+# │   │   ├── 'this' and 'Me' preferences
+# │   │   └── var preferences
+# │   │
+# │   ├── Miscellaneous rules
+# │   │
+# │   ├── Formatting rules
+# │   │   ├── Using directive options
+# │   │   ├── New-line options
+# │   │   ├── Indentation options
+# │   │   ├── Spacing options
+# │   │   └── Wrap options
+# │   │
+# │   └── Naming Rules
+# │       ├── Non-private static fields
+# │       ├── Non-private readonly fields
+# │       ├── Constant fields
+# │       ├── Static fields
+# │       ├── Instance fields
+# │       ├── Locals and parameters
+# │       ├── Local functions
+# │       └── Default
+# │
+# ├── Roslynator Analyzer Rules ─────────────────────────────────────────────────
+# │   │
+# │   ├── Formatting (RCS0xxx)
+# │   ├── Code Quality (RCS1xxx)
+# │   └── For Roslyn packages (Microsoft.CodeAnalysis*) (RCS9xxx)
+# │
+# ├── Roslynator Refactoring Rules ──────────────────────────────────────────────
+# ├── Roslynator Code Fixes for Compiler Diagnostics Rules ──────────────────────
+# ├── IDE-Only Rules ────────────────────────────────────────────────────────────
+# └── Misc Rules ────────────────────────────────────────────────────────────────
+#
+
+
 [*.cs]
 
-# --- ***************************************
-# ---        Code quality Rules           ---
-# --- ***************************************
+# ═════════════════════════════ Code Quality Rules ═════════════════════════════
 
-# See: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/
-
-# -------------------------------------------
-# ---        Design Rules                 ---
-# -------------------------------------------
-
-# See: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/design-warnings
+# ──────────────────────────────── Design Rules ────────────────────────────────
 
 # CA1000: Do not declare static members on generic types
 dotnet_diagnostic.CA1000.severity = suggestion
@@ -463,20 +560,12 @@ dotnet_diagnostic.CA1069.severity = warning
 # CA1070: Do not declare event fields as virtual
 dotnet_diagnostic.CA1070.severity = warning
 
-# -------------------------------------------
-# ---        Documentation Rules          ---
-# -------------------------------------------
-
-# See: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/documentation-warnings
+# ──────────────────────────── Documentation Rules ─────────────────────────────
 
 # CA1200: Avoid using cref tags with a prefix
 dotnet_diagnostic.CA1200.severity = suggestion
 
-# -------------------------------------------
-# ---        Globalization Rules          ---
-# -------------------------------------------
-
-# See: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/globalization-warnings
+# ──────────────────────────── Globalization Rules ─────────────────────────────
 
 # CA1303: Do not pass literals as localized parameters
 dotnet_diagnostic.CA1303.severity = suggestion
@@ -506,11 +595,7 @@ dotnet_diagnostic.CA1311.severity = suggestion
 # CA2101: Specify marshalling for P/Invoke string arguments
 dotnet_diagnostic.CA2101.severity = suggestion
 
-# -------------------------------------------
-# --- Portability and interoperability    ---
-# -------------------------------------------
-
-# See: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/interoperability-warnings
+# ────────────────────── Portability and interoperability ──────────────────────
 
 # CA1401: P/Invokes should not be visible
 dotnet_diagnostic.CA1401.severity = suggestion
@@ -537,11 +622,7 @@ dotnet_diagnostic.CA1421.severity = warning
 # CA1422: Validate platform compatibility
 dotnet_diagnostic.CA1422.severity = suggestion
 
-# -------------------------------------------
-# ---        Maintainability Rules        ---
-# -------------------------------------------
-
-# See: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/maintainability-warnings
+# ─────────────────────────── Maintainability Rules ────────────────────────────
 
 # CA1501: Avoid excessive inheritance
 dotnet_diagnostic.CA1501.severity = suggestion
@@ -583,11 +664,7 @@ dotnet_diagnostic.CA1514.severity = suggestion
 # CA1515: Consider making public types internal
 dotnet_diagnostic.CA1515.severity = suggestion
 
-# -------------------------------------------
-# ---        Naming Rules                 ---
-# -------------------------------------------
-
-# See: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/naming-warnings
+# ──────────────────────────────── Naming Rules ────────────────────────────────
 
 # CA1700: Do not name enum values 'Reserved'
 dotnet_diagnostic.CA1700.severity = warning
@@ -637,11 +714,7 @@ dotnet_diagnostic.CA1725.severity = suggestion
 # CA1727: Use PascalCase for named placeholders
 dotnet_diagnostic.CA1727.severity = suggestion
 
-# -------------------------------------------
-# ---        Performance Rules            ---
-# -------------------------------------------
-
-# See: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/performance-warnings
+# ───────────────────────────── Performance Rules ──────────────────────────────
 
 # CA1802: Use Literals Where Appropriate
 dotnet_diagnostic.CA1802.severity = suggestion
@@ -826,11 +899,7 @@ dotnet_diagnostic.CA1871.severity = suggestion
 # CA1872: Prefer 'Convert.ToHexString' and 'Convert.ToHexStringLower' over call chains based on 'BitConverter.ToString'
 dotnet_diagnostic.CA1872.severity = suggestion
 
-# -------------------------------------------
-# ---        SingleFile Rules             ---
-# -------------------------------------------
-
-# See: https://learn.microsoft.com/en-us/dotnet/core/deploying/single-file/warnings/overview
+# ────────────────────────────── SingleFile Rules ──────────────────────────────
 
 # IL3000 Avoid accessing Assembly file path when publishing as a single file
 dotnet_diagnostic.IL3000.severity = suggestion
@@ -847,14 +916,7 @@ dotnet_diagnostic.IL3003.severity = suggestion
 # IL3005 RequiresAssemblyFilesAttribute cannot be placed directly on application entry point.
 dotnet_diagnostic.IL3005.severity = suggestion
 
-# -------------------------------------------
-# ---        Reliability Rules            ---
-# -------------------------------------------
-
-# Most of these are warnings, as they can lead to difficult
-# to diagnose and debug logic errors.
-#
-# See: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/reliability-warnings
+# ───────────────────────────── Reliability Rules ──────────────────────────────
 
 # CA2000: Dispose objects before losing scope
 dotnet_diagnostic.CA2000.severity = warning
@@ -910,14 +972,7 @@ dotnet_diagnostic.CA2022.severity = warning
 # CA2024: Do not use StreamReader.EndOfStream in async methods
 dotnet_diagnostic.CA2024.severity = warning
 
-# -------------------------------------------
-# ---        Security Rules               ---
-# -------------------------------------------
-
-# Most of these are errors, as they can lead
-# to attacks or stolen data.
-#
-# See: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/security-warnings
+# ─────────────────────────────── Security Rules ───────────────────────────────
 
 # CA2100: Review SQL queries for security vulnerabilities
 dotnet_diagnostic.CA2100.severity = warning
@@ -1202,11 +1257,7 @@ dotnet_diagnostic.CA5404.severity = error
 # CA5405: Do not always skip token validation in delegates
 dotnet_diagnostic.CA5405.severity = error
 
-# -------------------------------------------
-# ---        Usage Rules                  ---
-# -------------------------------------------
-
-# See: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/usage-warnings
+# ──────────────────────────────── Usage Rules ─────────────────────────────────
 
 # CA1801: Review unused parameters
 dotnet_diagnostic.CA1801.severity = suggestion
@@ -1351,19 +1402,11 @@ dotnet_diagnostic.CA2264.severity = suggestion
 # CA2265: Do not compare Span<T> to null or default
 dotnet_diagnostic.CA2265.severity = suggestion
 
-# --- ***************************************
-# ---        Code style Rules             ---
-# --- ***************************************
+# ══════════════════════════════ Code Style Rules ══════════════════════════════
 
-# See: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/
+# ━━━━━━━━━━━━━━━━━━━━ Language and unnecessary code rules ━━━━━━━━━━━━━━━━━━━━━
 
-# -------------------------------------------
-# --- Language and unnecessary code rules ---
-# -------------------------------------------
-
-# See: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/language-rules
-
-# --- using directive preferences ---
+# ──────────────────────── using directive preferences ─────────────────────────
 
 # IDE0005: Remove unnecessary using directives
 dotnet_diagnostic.IDE0005.severity = suggestion
@@ -1375,7 +1418,7 @@ csharp_using_directive_placement = outside_namespace
 # IDE0073: Use file header
 dotnet_diagnostic.IDE0073.severity = none
 
-# --- Code-block preferences ---
+# ─────────────────────────── Code-block preferences ───────────────────────────
 
 # IDE0011: Add braces
 dotnet_diagnostic.IDE0011.severity = warning
@@ -1409,7 +1452,7 @@ csharp_style_prefer_primary_constructors = true
 dotnet_diagnostic.IDE0330.severity = suggestion
 csharp_prefer_system_threading_lock = true
 
-# --- Expression-bodied members ---
+# ───────────────────────── Expression-bodied members ──────────────────────────
 
 # IDE0021: Use expression body for constructors
 dotnet_diagnostic.IDE0021.severity = suggestion
@@ -1445,7 +1488,7 @@ csharp_style_expression_bodied_lambdas = when_on_single_line
 dotnet_diagnostic.IDE0061.severity = none
 csharp_style_expression_bodied_local_functions = when_on_single_line
 
-# --- Expression-level preferences ---
+# ──────────────────────── Expression-level preferences ────────────────────────
 
 # IDE0001: Simplify names
 dotnet_diagnostic.IDE0001.severity = suggestion
@@ -1644,20 +1687,20 @@ csharp_style_prefer_unbound_generic_type_in_nameof = true
 dotnet_diagnostic.IDE0350.severity = suggestion
 csharp_style_prefer_implicitly_typed_lambda_expression = true
 
-# --- Field preferences ---
+# ───────────────────────────── Field preferences ──────────────────────────────
 
 # IDE0044: Add readonly modifier
 dotnet_diagnostic.IDE0044.severity = suggestion
 dotnet_style_readonly_field = true
 
-# --- Language keyword vs. framework types preferences ---
+# ────────────── Language keyword vs. framework types preferences ──────────────
 
 # IDE0049: Use language keywords instead of framework type names for type references
 dotnet_diagnostic.IDE0049.severity = suggestion
 dotnet_style_predefined_type_for_locals_parameters_members = true
 dotnet_style_predefined_type_for_member_access = true
 
-# --- Modifier preferences ---
+# ──────────────────────────── Modifier preferences ────────────────────────────
 
 # IDE0036: Order modifiers
 dotnet_diagnostic.IDE0036.severity = suggestion
@@ -1685,9 +1728,9 @@ csharp_style_prefer_readonly_struct_member = true
 dotnet_diagnostic.IDE0320.severity = suggestion
 csharp_prefer_static_anonymous_function = true
 
-# --- New-line preferences ---
+# ──────────────────────────── New-line preferences ────────────────────────────
 
-# NOTE
+# ── NOTE ──────────────────────────────────────────────────────────────────────
 # At the time of generation these did not have documentation, but were listed in the rules.
 # There should be corresponding options for each, which should be added when the documentation is available.
 # See: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/language-rules#new-line-preferences
@@ -1713,13 +1756,13 @@ dotnet_diagnostic.IDE2005.severity = suggestion
 # IDE2006: Allow blank line after token in arrow expression
 dotnet_diagnostic.IDE2006.severity = suggestion
 
-# --- Null-checking preferences ---
+# ───────────────────────── Null-checking preferences ──────────────────────────
 
 # IDE1005: Use conditional delegate call
 dotnet_diagnostic.IDE1005.severity = suggestion
 csharp_style_conditional_delegate_call = true
 
-# --- Parameter preferences ---
+# ─────────────────────────── Parameter preferences ────────────────────────────
 
 # IDE0060: Remove unused parameter
 dotnet_diagnostic.IDE0060.severity = suggestion
@@ -1728,7 +1771,7 @@ dotnet_code_quality_unused_parameters = all
 # IDE0280: Use nameof
 dotnet_diagnostic.IDE0280.severity = warning
 
-# --- Parentheses preferences ---
+# ────────────────────────── Parentheses preferences ───────────────────────────
 
 # IDE0047: Remove unnecessary parentheses
 # IDE0048: Add parentheses for clarity
@@ -1739,7 +1782,7 @@ dotnet_style_parentheses_in_relational_binary_operators = always_for_clarity
 dotnet_style_parentheses_in_other_binary_operators = always_for_clarity
 dotnet_style_parentheses_in_other_operators = never_if_unnecessary
 
-# --- Pattern-matching preferences ---
+# ──────────────────────── Pattern-matching preferences ────────────────────────
 
 # IDE0019: Use pattern matching to avoid as followed by a null check
 # IDE0260: Use pattern matching
@@ -1769,13 +1812,13 @@ csharp_style_prefer_not_pattern = true
 dotnet_diagnostic.IDE0170.severity = suggestion
 csharp_style_prefer_extended_property_pattern = true
 
-# --- Suppression preferences ---
+# ────────────────────────── Suppression preferences ───────────────────────────
 
 # IDE0079: Remove unnecessary suppression
 dotnet_diagnostic.IDE0079.severity = warning
 dotnet_remove_unnecessary_suppression_exclusions = none
 
-# --- this. preferences ---
+# ───────────────────────────── this. preferences ──────────────────────────────
 
 # IDE0003: Remove this qualification
 # IDE0009: Add this qualification
@@ -1786,7 +1829,7 @@ dotnet_style_qualification_for_field = false
 dotnet_style_qualification_for_method = false
 dotnet_style_qualification_for_property = false
 
-# --- var preferences ---
+# ────────────────────────────── var preferences ───────────────────────────────
 
 # IDE0007: Use var instead of explicit type
 # IDE0008: Use explicit type instead of var
@@ -1796,11 +1839,7 @@ csharp_style_var_for_built_in_types = false
 csharp_style_var_when_type_is_apparent = false
 csharp_style_var_elsewhere = false
 
-# -------------------------------------------
-# ---       Miscellaneous rules           ---
-# -------------------------------------------
-
-# See: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/miscellaneous-rules
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Miscellaneous rules ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 # IDE0076: Remove invalid global SuppressMessageAttribute
 dotnet_diagnostic.IDE0076.severity = warning
@@ -1808,10 +1847,9 @@ dotnet_diagnostic.IDE0076.severity = warning
 # IDE0077: Avoid legacy format target in global SuppressMessageAttribute
 dotnet_diagnostic.IDE0077.severity = warning
 
-# -------------------------------------------
-# ---       Formatting rules              ---
-# -------------------------------------------
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Formatting rules ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
+# ── NOTE ──────────────────────────────────────────────────────────────────────
 # All formatting options are aggregated under the IDE0055 rule.
 # See: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/dotnet-formatting-options
 # See: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/csharp-formatting-options
@@ -1819,11 +1857,13 @@ dotnet_diagnostic.IDE0077.severity = warning
 # IDE0055: Fix formatting
 dotnet_diagnostic.IDE0055.severity = suggestion
 
-# Using directive options
+# ────────────────────────── Using directive options ───────────────────────────
+
 dotnet_sort_system_directives_first = true
 dotnet_separate_import_directive_groups = false
 
-# New-line options
+# ────────────────────────────── New-line options ──────────────────────────────
+
 csharp_new_line_before_open_brace = all
 csharp_new_line_before_else = true
 csharp_new_line_before_catch = true
@@ -1832,7 +1872,8 @@ csharp_new_line_before_members_in_object_initializers = true
 csharp_new_line_before_members_in_anonymous_types = true
 csharp_new_line_between_query_expression_clauses = true
 
-# Indentation options
+# ──────────────────────────── Indentation options ─────────────────────────────
+
 csharp_indent_case_contents = true
 csharp_indent_switch_labels = true
 csharp_indent_labels = one_less_than_current
@@ -1840,7 +1881,8 @@ csharp_indent_block_contents = true
 csharp_indent_braces = false
 csharp_indent_case_contents_when_block = false
 
-# Spacing options
+# ────────────────────────────── Spacing options ───────────────────────────────
+
 csharp_space_after_cast = false
 csharp_space_after_keywords_in_control_flow_statements = true
 csharp_space_between_parentheses = false
@@ -1864,21 +1906,22 @@ csharp_space_before_open_square_brackets = false
 csharp_space_between_empty_square_brackets = false
 csharp_space_between_square_brackets = false
 
-# Wrap options
+# ──────────────────────────────── Wrap options ────────────────────────────────
+
 csharp_preserve_single_line_statements = false
 csharp_preserve_single_line_blocks = true
 
-# -------------------------------------------
-# ---       Naming rules                  ---
-# -------------------------------------------
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Naming rules ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
+# ── NOTE ──────────────────────────────────────────────────────────────────────
 # All naming rules are aggregated under the IDE1006 rule.
 # See: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/naming-rules
 
 # IDE1006: Naming styles
 dotnet_diagnostic.IDE1006.severity = suggestion
 
-# Non-private static fields: PascalCase
+# ─────────────────── Non-private static fields: PascalCase ────────────────────
+
 dotnet_naming_symbols.non_private_static_fields.applicable_kinds = field
 dotnet_naming_symbols.non_private_static_fields.applicable_accessibilities = public, protected, internal, protected_internal, private_protected
 dotnet_naming_symbols.non_private_static_fields.required_modifiers = static
@@ -1887,7 +1930,8 @@ dotnet_naming_rule.non_private_static_fields_should_be_pascal_case.symbols = non
 dotnet_naming_rule.non_private_static_fields_should_be_pascal_case.style = non_private_static_field_style
 dotnet_naming_rule.non_private_static_fields_should_be_pascal_case.severity = suggestion
 
-# Non-private readonly fields: PascalCase
+# ────────────────── Non-private readonly fields: PascalCase ───────────────────
+
 dotnet_naming_symbols.non_private_readonly_fields.applicable_kinds = field
 dotnet_naming_symbols.non_private_readonly_fields.applicable_accessibilities = public, protected, internal, protected_internal, private_protected
 dotnet_naming_symbols.non_private_readonly_fields.required_modifiers = readonly
@@ -1896,14 +1940,16 @@ dotnet_naming_rule.non_private_readonly_fields_should_be_pascal_case.symbols = n
 dotnet_naming_rule.non_private_readonly_fields_should_be_pascal_case.style = non_private_readonly_field_style
 dotnet_naming_rule.non_private_readonly_fields_should_be_pascal_case.severity = suggestion
 
-# Constant fields: PascalCase
+# ──────────────────────── Constant fields: PascalCase ─────────────────────────
+
 dotnet_naming_symbols.constant_fields.applicable_kinds = field
 dotnet_naming_symbols.constant_fields.required_modifiers = const
 dotnet_naming_rule.constant_fields_should_be_pascal_case.symbols = constant_fields
 dotnet_naming_rule.constant_fields_should_be_pascal_case.style = pascal_case_style
 dotnet_naming_rule.constant_fields_should_be_pascal_case.severity = suggestion
 
-# Static fields: camelCase with s_ prefix
+# ────────────────── Static fields: camelCase with s_ prefix ───────────────────
+
 dotnet_naming_symbols.static_fields.applicable_kinds = field
 dotnet_naming_symbols.static_fields.required_modifiers = static
 dotnet_naming_style.static_field_style.capitalization = camel_case
@@ -1912,7 +1958,8 @@ dotnet_naming_rule.static_fields_should_be_camel_case.symbols = static_fields
 dotnet_naming_rule.static_fields_should_be_camel_case.style = static_field_style
 dotnet_naming_rule.static_fields_should_be_camel_case.severity = suggestion
 
-# Instance fields: camelCase with _ prefix
+# ────────────────── Instance fields: camelCase with _ prefix ──────────────────
+
 dotnet_naming_symbols.instance_fields.applicable_kinds = field
 dotnet_naming_style.instance_field_style.capitalization = camel_case
 dotnet_naming_style.instance_field_style.required_prefix = _
@@ -1920,49 +1967,33 @@ dotnet_naming_rule.instance_fields_should_be_camel_case.symbols = instance_field
 dotnet_naming_rule.instance_fields_should_be_camel_case.style = instance_field_style
 dotnet_naming_rule.instance_fields_should_be_camel_case.severity = suggestion
 
-# Locals and parameters: camelCase
+# ────────────────────── Locals and parameters: camelCase ──────────────────────
+
 dotnet_naming_symbols.locals_and_parameters.applicable_kinds = parameter, local
 dotnet_naming_style.camel_case_style.capitalization = camel_case
 dotnet_naming_rule.locals_should_be_camel_case.symbols = locals_and_parameters
 dotnet_naming_rule.locals_should_be_camel_case.style = camel_case_style
 dotnet_naming_rule.locals_should_be_camel_case.severity = suggestion
 
-# Local functions: PascalCase
+# ──────────────────────── Local functions: PascalCase ─────────────────────────
+
 dotnet_naming_symbols.local_functions.applicable_kinds = local_function
 dotnet_naming_style.local_function_style.capitalization = pascal_case
 dotnet_naming_rule.local_functions_should_be_pascal_case.symbols = local_functions
 dotnet_naming_rule.local_functions_should_be_pascal_case.style = local_function_style
 dotnet_naming_rule.local_functions_should_be_pascal_case.severity = suggestion
 
-# Default: PascalCase
+# ──────────────────────────── Default: PascalCase ─────────────────────────────
+
 dotnet_naming_symbols.all_members.applicable_kinds = *
 dotnet_naming_style.pascal_case_style.capitalization = pascal_case
 dotnet_naming_rule.members_should_be_pascal_case.symbols = all_members
 dotnet_naming_rule.members_should_be_pascal_case.style = pascal_case_style
 dotnet_naming_rule.members_should_be_pascal_case.severity = suggestion
 
-# --- ***************************************
-# ---       IDE-only rules                ---
-# --- ***************************************
+# ═════════════════════════ Roslynator Analyzer Rules ══════════════════════════
 
-# JSON0001: Invalid JSON pattern
-dotnet_diagnostic.JSON001.severity = error
-
-# JSON0002: Probable JSON string detected
-dotnet_diagnostic.JSON002.severity = warning
-
-# RE0001: Invalid regex pattern
-dotnet_diagnostic.RE0001.severity = error
-
-# --- ***************************************
-# ---    Roslynator Analyzer Rules        ---
-# --- ***************************************
-
-# See: https://josefpihrt.github.io/docs/roslynator/analyzers
-
-# -------------------------------------------
-# ---    Formatting Rules (RCS0xxx)       ---
-# -------------------------------------------
+# ───────────────────────── Formatting Rules (RCS0xxx) ─────────────────────────
 
 # RCS0001: Add blank line after embedded statement
 dotnet_diagnostic.RCS0001.severity = none
@@ -2114,9 +2145,7 @@ dotnet_diagnostic.RCS0062.severity = none
 # RCS0063: Remove unnecessary blank line
 dotnet_diagnostic.RCS0063.severity = none
 
-# -------------------------------------------
-# ---    Code Analysis Rules (RCS1xxx)    ---
-# -------------------------------------------
+# ─────────────────────── Code Analysis Rules (RCS1xxx) ────────────────────────
 
 # RCS1001: Add braces (when expression spans over multiple lines)
 dotnet_diagnostic.RCS1001.severity = suggestion
@@ -2706,9 +2735,7 @@ dotnet_diagnostic.RCS1267.severity = suggestion
 # RCS1268: Simplify numeric comparison
 dotnet_diagnostic.RCS1268.severity = suggestion
 
-# -------------------------------------------
-# ---  Roslyn Analyzer Rules (RCS9xxx)    ---
-# -------------------------------------------
+# ────────────────────── Roslyn Analyzer Rules (RCS9xxx) ───────────────────────
 
 # RCS9001: Use pattern matching
 dotnet_diagnostic.RCS9001.severity = silent
@@ -2743,11 +2770,7 @@ dotnet_diagnostic.RCS9010.severity = silent
 # RCS9011: Specify ExportCodeFixProviderAttribute.Name
 dotnet_diagnostic.RCS9011.severity = silent
 
-# --- ***************************************
-# ---    Roslynator Refactoring Rules     ---
-# --- ***************************************
-
-# See: https://josefpihrt.github.io/docs/roslynator/refactorings
+# ════════════════════════ Roslynator Refactoring Rules ════════════════════════
 
 # RR0002: Add braces
 roslynator_refactoring.add_braces.enabled = true
@@ -3343,11 +3366,7 @@ roslynator_refactoring.add_all_properties_to_initializer.enabled = true
 # RR0217: Deconstruct foreach variable
 roslynator_refactoring.deconstruct_foreach_variable.enabled = true
 
-# --- ***************************************
-# ---       Roslynator Fixes Rules        ---
-# --- ***************************************
-
-# See: https://josefpihrt.github.io/docs/roslynator/fixes
+# ════════════ Roslynator Code Fixes for Compiler Diagnostics Rules ════════════
 
 # CS0019: Operator 'operator' cannot be applied to operands of type 'type' and 'type'
 roslynator_fix.CS0019.enabled = true
@@ -3394,7 +3413,8 @@ roslynator_fix.CS0109.enabled = true
 # CS0112: A static member 'function' cannot be marked as override, virtual or abstract
 roslynator_fix.CS0112.enabled = true
 
-# CS0114: 'function1' hides inherited member 'function2'. To make the current method override that implementation, add the override keyword. Otherwise add the new keyword
+# CS0114: 'function1' hides inherited member 'function2'. To make the current method override that implementation,
+# add the override keyword. Otherwise add the new keyword
 roslynator_fix.CS0114.enabled = true
 
 # CS0115: 'function': no suitable method found to override
@@ -3427,7 +3447,8 @@ roslynator_fix.CS0132.enabled = true
 # CS0133: The expression being assigned to 'variable' must be constant
 roslynator_fix.CS0133.enabled = true
 
-# CS0136: A local variable named 'var' cannot be declared in this scope because it would give a different meaning to 'var', which is already used in a 'parent or current/child' scope to denote something else
+# CS0136: A local variable named 'var' cannot be declared in this scope because it would give a different meaning to 'var',
+# which is already used in a 'parent or current/child' scope to denote something else
 roslynator_fix.CS0136.enabled = true
 
 # CS0139: No enclosing loop out of which to break or continue
@@ -3520,7 +3541,8 @@ roslynator_fix.CS0405.enabled = true
 # CS0407: 'return-type method' has the wrong return type
 roslynator_fix.CS0407.enabled = true
 
-# CS0409: A constraint clause has already been specified for type parameter 'type parameter'. All of the constraints for a type parameter must be specified in a single where clause
+# CS0409: A constraint clause has already been specified for type parameter 'type parameter'. All of the constraints for a
+# type parameter must be specified in a single where clause
 roslynator_fix.CS0409.enabled = true
 
 # CS0428: Cannot convert method group 'identifier' to non-delegate type 'type'. Did you intend to invoke the method?
@@ -3685,7 +3707,8 @@ roslynator_fix.CS1031.enabled = true
 # CS1057: 'member': static classes cannot contain protected members
 roslynator_fix.CS1057.enabled = true
 
-# CS1061: 'type' does not contain a definition for 'member' and no extension method 'name' accepting a first argument of type 'type' could be found (are you missing a using directive or an assembly reference?)
+# CS1061: 'type' does not contain a definition for 'member' and no extension method 'name' accepting a first argument of type 'type'
+# could be found (are you missing a using directive or an assembly reference?)
 roslynator_fix.CS1061.enabled = true
 
 # CS1100: Method 'name' has a parameter modifier 'this' which is not on the first parameter
@@ -3781,7 +3804,8 @@ roslynator_fix.CS1988.enabled = true
 # CS1994: The 'async' modifier can only be used in methods that have a body
 roslynator_fix.CS1994.enabled = true
 
-# CS1997: Since 'RemoveReturnKeywordOrReturnExpression.FooAsync()' is an async method that returns 'Task', a return keyword must not be followed by an object expression. Did you intend to return 'Task<T>'?
+# CS1997: Since 'RemoveReturnKeywordOrReturnExpression.FooAsync()' is an async method that returns 'Task', a return keyword must not
+# be followed by an object expression. Did you intend to return 'Task<T>'?
 roslynator_fix.CS1997.enabled = true
 
 # CS3000: Methods with variable arguments are not CLS-compliant
@@ -3868,12 +3892,22 @@ roslynator_fix.CS8765.enabled = true
 # CS8767: Nullability of reference types in type of parameter doesn't match implicitly implemented member
 roslynator_fix.CS8767.enabled = true
 
-# --- ***************************************
-# ---           Misc rules                ---
-# --- ***************************************
+# ═══════════════════════════════ IDE-only rules ═══════════════════════════════
+
+# JSON0001: Invalid JSON pattern
+dotnet_diagnostic.JSON001.severity = error
+
+# JSON0002: Probable JSON string detected
+dotnet_diagnostic.JSON002.severity = warning
+
+# RE0001: Invalid regex pattern
+dotnet_diagnostic.RE0001.severity = error
+
+# ═════════════════════════════════ Misc rules ═════════════════════════════════
 
 # We still want to perform null-checks, especially if we can't tolerate a null.
 resharper_condition_is_always_true_or_false_according_to_nullable_api_contract_highlighting = hint
+
 # This may cause some strange alignment when the expression is indented. Uncomment if so.
 # resharper_align_multiline_switch_expression = false
 # Prefer the regions outdented, as they act as section dividers.

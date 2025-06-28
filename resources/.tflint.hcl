@@ -1,14 +1,17 @@
-# --- .tflint.hcl - Configuration for tflint ---
-# --- Docs: https://github.com/terraform-linters/tflint/blob/master/docs/user-guide/config.md ---
+#  ╭─────────────────────────────────────────────────────────────────────────────────────╮
+#     .tflint.hcl - Configuration for tflint
+#     Docs:
+#     https://github.com/terraform-linters/tflint/blob/master/docs/user-guide/config.md
+#  ╰─────────────────────────────────────────────────────────────────────────────────────╯
 
-# --- General configuration ---
+# ── General configuration ─────────────────────────────────────────────────────
 
 config {
     call_module_type = "local"
-    force = false
+    force            = false
 }
 
-# --- Plugins ---
+# ── Plugins ───────────────────────────────────────────────────────────────────
 
 plugin "terraform" {
     enabled = true
@@ -21,7 +24,7 @@ plugin "azurerm" {
     source  = "github.com/terraform-linters/tflint-ruleset-azurerm"
 }
 
-# --- General Rules ---
+# ── General Rules ─────────────────────────────────────────────────────────────
 
 rule "terraform_documented_outputs" {
     enabled = true
@@ -44,7 +47,7 @@ rule "terraform_unused_required_providers" {
     enabled = true
 }
 
-# --- Azure Rules ---
+# ── Azure Rules ───────────────────────────────────────────────────────────────
 
 rule "azurerm_resource_missing_tags" {
     enabled = true

@@ -1,7 +1,9 @@
-# --- .gitignore ---
-# --- Docs: https://git-scm.com/docs/gitignore ---
+#  ╭──────────────────────────────────────────────────────────────────────────────╮
+#     .gitignore
+#     Docs: https://git-scm.com/docs/gitignore
+#  ╰──────────────────────────────────────────────────────────────────────────────╯
 
-# --- OS-Level Ignores ---
+# ── OS-level Ignores ────────────────────────────────────────────────────────
 
 # macOS
 .DS_Store
@@ -21,7 +23,7 @@ $RECYCLE.BIN/
 .cache/
 Trash-*
 
-# --- IDE: JetBrains Rider, ReSharper ---
+# ── IDE: JetBrains Rider, ReSharper ───────────────────────────────────────────
 
 .idea/
 .idea_modules/
@@ -33,7 +35,7 @@ Trash-*
 resharper-host/
 .ReSharper*/
 
-# --- IDE: Visual Studio ---
+# ── IDE: Visual Studio ────────────────────────────────────────────────────────
 
 .vs/
 *.user
@@ -49,7 +51,7 @@ resharper-host/
 # Publish Profiles (individual profiles only)
 Properties/PublishProfiles/*.pubxml.user
 
-# --- IDE: Visual Studio Code ---
+# ── IDE: Visual Studio Code ───────────────────────────────────────────────────
 
 .vscode/*
 .history/
@@ -61,7 +63,7 @@ Properties/PublishProfiles/*.pubxml.user
 !.vscode/tasks.json
 !.vscode/launch.json
 
-# --- CI/CD Pipelines ---
+# ── CI/CD Pipelines ───────────────────────────────────────────────────────────
 
 # Ignore build output from custom actions
 .github/actions/**/node_modules/

@@ -1,6 +1,9 @@
 ---
-# --- csharpierrc.yml - Configuration file for CSharpier ---
-# --- Docs: https://csharpier.com/docs/Configuration ---
+#  ╭──────────────────────────────────────────────────────────────────────────────╮
+#     .csharpierrc.yml - Configuration file for CSharpier
+#     Docs:
+#     https://csharpier.com/docs/Configuration
+#  ╰──────────────────────────────────────────────────────────────────────────────╯
 
 printWidth: 120
 useTabs: false

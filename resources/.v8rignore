@@ -1,4 +1,7 @@
-# --- .v8rignore - Whitelist for v8r ---
-# --- Docs: https://chris48s.github.io/v8r/ignoring-files/ ---
+#  ╭──────────────────────────────────────────────────────────────────────────────╮
+#     .v8rignore - Whitelist for v8r
+#     Docs:
+#     https://chris48s.github.io/v8r/ignoring-files/
+#  ╰──────────────────────────────────────────────────────────────────────────────╯
 
 **/valestyles/**

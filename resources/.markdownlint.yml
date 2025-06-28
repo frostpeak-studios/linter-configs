@@ -1,6 +1,9 @@
 ---
-# --- markdownlint.yml - Configuration file for markdownlint ---
-# --- Docs: https://github.com/DavidAnson/markdownlint ---
+#  ╭──────────────────────────────────────────────────────────────────────────────╮
+#     .markdownlint.yml - Configuration file for markdownlint
+#     Docs:
+#     https://github.com/DavidAnson/markdownlint
+#  ╰──────────────────────────────────────────────────────────────────────────────╯
 
 # Enable all by default.
 default: true
@@ -40,12 +43,12 @@ MD035:
 
 # MD040/fenced-code-language: Fenced code blocks should have a language specified.
 MD040:
-  allowed_languages: []
+  allowed_languages: [ ]
   language_only: false
 
 # MD044/proper-names: Proper names should have the correct capitalization.
 MD044:
-  names: []
+  names: [ ]
   code_blocks: false
 
 # MD046/code-block-style: Code block style

@@ -1,6 +1,9 @@
-# --- .lycheeignore - Whitelist for lychee ---
-# --- Docs: https://lychee.cli.rs/recipes/excluding-links/ ---
-# ---       https://lychee.cli.rs/recipes/excluding-paths/ ---
+#  ╭──────────────────────────────────────────────────────────────────────────────╮
+#     .lycheeignore - Whitelist for lychee
+#     Docs:
+#     https://lychee.cli.rs/recipes/excluding-links/
+#     https://lychee.cli.rs/recipes/excluding-paths/
+#  ╰──────────────────────────────────────────────────────────────────────────────╯
 
 # Base path used for building links to linter config files.
 # Doesn't actually exist, but does when the filename is appended to it.

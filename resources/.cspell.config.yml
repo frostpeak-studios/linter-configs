@@ -1,13 +1,16 @@
 ---
-# --- .cspell.config.yml - Configuration file for CSpell ---
-# --- Docs: https://cspell.org/docs/Configuration ---
+#  ╭──────────────────────────────────────────────────────────────────────────────╮
+#     .cspell.config.yml - Configuration file for CSpell
+#     Docs:
+#     https://cspell.org/docs/Configuration
+#  ╰──────────────────────────────────────────────────────────────────────────────╯
 
-# --- Versioning ---
+# ── Versioning ────────────────────────────────────────────────────────────────
 
 $schema: "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json"
 version: "0.2"
 
-# --- Config properties ---
+# ── Config properties ─────────────────────────────────────────────────────────
 
 # Include en-GB as some frameworks use its spelling.
 language: en, en-GB
@@ -20,7 +23,7 @@ cache:
   useCache: true
   cacheStrategy: content
 
-# --- Dictionaries ---
+# ── Dictionaries ──────────────────────────────────────────────────────────────
 
 dictionaryDefinitions:
   - name: dictionary
@@ -29,7 +32,7 @@ dictionaryDefinitions:
 dictionaries:
   - dictionary
 
-# --- Includes/Excludes ---
+# ── Includes/Excludes ─────────────────────────────────────────────────────────
 
 enableFiletypes:
   - csharp

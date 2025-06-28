@@ -1,6 +1,9 @@
 ---
-# --- .yamllint - Configuration file for yamllint ---
-# --- Docs: https://yamllint.readthedocs.io/en/stable/configuration.html ---
+#  ╭──────────────────────────────────────────────────────────────────────────────╮
+#     .yamllint - Configuration file for yamllint
+#     Docs:
+#     https://yamllint.readthedocs.io/en/stable/configuration.html
+#  ╰──────────────────────────────────────────────────────────────────────────────╯
 
 extends: default
 

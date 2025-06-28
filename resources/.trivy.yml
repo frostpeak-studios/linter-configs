@@ -1,13 +1,16 @@
 ---
-# --- .trivy.yml - Configuration file for trivy vulnerability scanner --
-# --- Docs: https://trivy.dev/latest/docs/references/configuration/config-file/ ---
+#  ╭──────────────────────────────────────────────────────────────────────────────╮
+#     .trivy.yml - Configuration file for trivy vulnerability scanner
+#     Docs:
+#     https://trivy.dev/latest/docs/references/configuration/config-file/
+#  ╰──────────────────────────────────────────────────────────────────────────────╯
 
-# --- General Settings ---
+# ── General Settings ──────────────────────────────────────────────────────────
 
 timeout: 5m0s
 exit-code: 1
 
-# --- Scan Configuration ---
+# ── Scan Configuration ────────────────────────────────────────────────────────
 
 # Only enable the rules relevant to us to speed up the scan.
 enable-builtin-rules:

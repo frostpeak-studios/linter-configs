@@ -1,12 +1,14 @@
-# --- .gitattributes - Enforce line endings and file tracking ---
-# --- Docs: https://git-scm.com/docs/gitattributes ---
+#  ╭──────────────────────────────────────────────────────────────────────────────╮
+#     .gitattributes - Enforce line endings and file tracking
+#     Docs: https://git-scm.com/docs/gitattributes
+#  ╰──────────────────────────────────────────────────────────────────────────────╯
 
-# --- Line endings ---
+# ── Line Endings ────────────────────────────────────────────────────────────
 
 # Default to LF
 * eol=lf
 
-# --- Default file type attributes ---
+# ── Default File Type Attributes ────────────────────────────────────────────
 
 # All file types
 * text=auto

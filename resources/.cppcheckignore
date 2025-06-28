@@ -1,5 +1,8 @@
-# --- .cppcheckignore - Suppressions for cppcheck ---
-# --- Docs: https://cppcheck.sourceforge.io/manual.pdf (pg 18) ---
+#  ╭──────────────────────────────────────────────────────────────────────────────────╮
+#     .cppcheckignore - Suppressions for cppcheck
+#     Docs:
+#     https://cppcheck.sourceforge.io/manual.pdf (pg 18)
+#  ╰──────────────────────────────────────────────────────────────────────────────────╯
 
 *:*/_deps/*
 *:*/lib/*

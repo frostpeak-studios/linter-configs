@@ -1,6 +1,9 @@
 ---
-# --- checkov.yml - Configuration file for Checkov ---
-# --- Docs: https://www.checkov.io/3.Custom%20Policies/YAML%20Custom%20Policies.html ---
+#  ╭──────────────────────────────────────────────────────────────────────────────╮
+#     .checkov.yml - Configuration file for Checkov
+#     Docs:
+#     https://www.checkov.io/3.Custom%20Policies/YAML%20Custom%20Policies.html
+#  ╰──────────────────────────────────────────────────────────────────────────────╯
 
 # Automatically download external modules referenced in the code (e.g., Terraform Registry).
 download-external-modules: true

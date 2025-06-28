@@ -1,7 +1,10 @@
-# --- .lychee.toml - Configuration for lychee link checker ---
-# --- Docs: https://lychee.cli.rs/usage/config/ ---
+#  ╭──────────────────────────────────────────────────────────────────────────────╮
+#     .lychee.toml - Configuration for lychee link checker
+#     Docs:
+#     https://lychee.cli.rs/usage/config/
+#  ╰──────────────────────────────────────────────────────────────────────────────╯
 
-#############################  Display  #############################
+# ────────────────────────────────── Display ───────────────────────────────────
 
 # Verbose program output
 # Accepts log level: "error", "warn", "info", "debug", "trace"
@@ -13,7 +16,7 @@ no_progress = false
 # Path to a summary output file.
 # output = ".config.dummy.report.md"
 
-#############################  Cache  ###############################
+# ─────────────────────────────────── Cache ────────────────────────────────────
 
 # Enable link caching. This can be helpful to avoid checking the same links on
 # multiple runs.
@@ -22,7 +25,7 @@ cache = true
 # Discard all cached requests older than this duration.
 max_cache_age = "2d"
 
-#############################  Runtime  #############################
+# ────────────────────────────────── Runtime ───────────────────────────────────
 
 # Number of threads to use.
 # Defaults to the number of cores available to the system if omitted.
@@ -37,7 +40,7 @@ max_retries = 2
 # Maximum number of concurrent link checks.
 max_concurrency = 14
 
-#############################  Requests  ############################
+# ────────────────────────────────── Requests ──────────────────────────────────
 
 # User agent to send with each request.
 # user_agent = "curl/7.83. 1"
@@ -91,7 +94,7 @@ method = "get"
 # Enable the checking of fragments in links.
 include_fragments = true
 
-#############################  Exclusions  ##########################
+# ───────────────────────────────── Exclusions ─────────────────────────────────
 
 # Skip missing input files (default is to error if they don't exist).
 skip_missing = false

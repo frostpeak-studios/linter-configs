@@ -1,18 +1,16 @@
-# --------------------------------------------------------------------------------------
-# --- .editorconfig - Enforce consistent coding style and formatting.
-# --- Docs: https://editorconfig.org/
-# ---
-# --- This is a base config for universal languages/formats such as JSON, YAML, etc.
-# --- For language/framework specific configs, see the editorconfig directory.
-# ---
-# --- Some of the rules here are JetBrains-specific and require Rider or the ReSharper VS plugin.
-# --- They are prefixed with either reshaper_ or ij_
-# --- These should be gracefully ignored in VS/Code.
-# --------------------------------------------------------------------------------------
+#  ╭──────────────────────────────────────────────────────────────────────────────╮
+#     .editorconfig - Enforce consistent coding style and formatting.
+#     Docs: https://editorconfig.org/
+#
+#     This is a base config for universal languages/formats such as JSON, YAML, etc.
+#     For language/framework specific configs, see the editorconfig directory.
+#
+#     Some of the rules here are JetBrains-specific and require Rider or the
+#     ReSharper VS plugin. They are prefixed with either reshaper_ or ij_
+#     These should be gracefully ignored in VS/Code.
+#  ╰──────────────────────────────────────────────────────────────────────────────╯
 
-# -------------------------------------------
-# ---       Global Settings               ---
-# -------------------------------------------
+# ── Global Settings ─────────────────────────────────────────────────────────
 
 # Top-most EditorConfig file.
 root = true
@@ -34,9 +32,7 @@ ij_visual_guides = 120
 ij_smart_tabs = false
 ij_wrap_on_typing = false
 
-# -------------------------------------------
-# ---      Config Files (non-XML)         ---
-# -------------------------------------------
+# ── Config Files (non-XML) ────────────────────────────────────────────────────
 
 [*.{yml,yaml,toml,json,ini,config,cfg,properties,editorconfig}]
 # Don't force wrapping, as it may break some attribute's values.
@@ -100,9 +96,7 @@ ij_yaml_space_before_colon = false
 ij_yaml_spaces_within_braces = true
 ij_yaml_spaces_within_brackets = true
 
-# -------------------------------------------
-# ---       Documentation                 ---
-# -------------------------------------------
+# ── Documentation ─────────────────────────────────────────────────────────────
 
 [{*.markdown,*.md}]
 ij_markdown_force_one_space_after_blockquote_symbol = true

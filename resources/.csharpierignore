@@ -1,4 +1,7 @@
-# --- .csharpierignore - Whitelist for csharpier ---
-# --- Docs: https://csharpier.com/docs/Ignore ---
+#  ╭──────────────────────────────────────────────────────────────────────────────────╮
+#     .csharpierignore - Whitelist for csharpier
+#     Docs:
+#     https://csharpier.com/docs/Ignore
+#  ╰──────────────────────────────────────────────────────────────────────────────────╯
 
 build/

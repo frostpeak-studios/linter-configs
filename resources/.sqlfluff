@@ -1,9 +1,10 @@
-# --- .sqlfluff - Configuration for SQLFluff linter ---
-# --- Docs: https://docs.sqlfluff.com/en/stable/configuration/setting_configuration.html#configuration-files ---
+#  ╭────────────────────────────────────────────────────────────────────────────────────────────────────╮
+#     .sqlfluff - Configuration for SQLFluff linter
+#     Docs:
+#     https://docs.sqlfluff.com/en/stable/configuration/setting_configuration.html#configuration-files
+#  ╰────────────────────────────────────────────────────────────────────────────────────────────────────╯
 
-# TODO: test and tweak this config
-
-# --- General Configuration ---
+# ── General Configuration ─────────────────────────────────────────────────────
 
 [sqlfluff]
 
@@ -15,7 +16,7 @@ max_line_length = 120
 # Use all processors but one. 0 means all CPUs.
 processes = -1
 
-# --- Rules ---
+# ── Rules ─────────────────────────────────────────────────────────────────────
 
 # Use lowercase everywhere, as we don't uppercase keywords and such in
 # other programming languages, we rely on syntax highlighting.

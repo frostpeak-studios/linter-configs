@@ -1,7 +1,10 @@
-# --- dictionary.txt - Custom cspell dictionary for Frostpeak Studios projects ---
-# --- Docs: https://cspell.org/docs/dictionaries/custom-dictionaries ---
+#  ╭──────────────────────────────────────────────────────────────────────────────╮
+#     dictionary.txt - Custom cspell dictionary for Frostpeak Studios projects
+#     Docs:
+#     https://cspell.org/docs/dictionaries/custom-dictionaries
+#  ╰──────────────────────────────────────────────────────────────────────────────╯
 
-# --- General / Misc ---
+# ── General | Misc ─────────────────────────────────────────────────────
 
 accessibilities
 finalizer
@@ -15,14 +18,14 @@ uninstantiated
 AMPM
 Uncomparables
 
-# --- C#/.NET ---
+# ── C# | .NET ─────────────────────────────────────────────────────
 
 Avalonia
 Blazor
 Encryptor
 Linq
 
-# --- Tools/Frameworks ---
+# ── Tools | Frameworks ─────────────────────────────────────────────────────
 
 devskim
 Fmod
@@ -35,7 +38,7 @@ Qodana
 qodo
 tflint
 
-# --- File Types ---
+# ── File Types ─────────────────────────────────────────────────────
 
 axaml
 dylib
@@ -49,7 +52,7 @@ jsonlintrc
 # .v8rignore triggers a false positive.
 rignore
 
-# --- Code ---
+# ── Code ─────────────────────────────────────────────────────
 
 cref
 lerp

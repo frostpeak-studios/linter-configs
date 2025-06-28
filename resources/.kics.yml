@@ -1,6 +1,9 @@
 ---
-# --- .kics.yml - Configuration for KICS scanner ---
-# --- Docs: https://docs.kics.io/latest/configuration-file/ ---
+#  ╭──────────────────────────────────────────────────────────────────────────────╮
+#     .kics.yml - Configuration for KICS scanner
+#     Docs:
+#     https://docs.kics.io/latest/configuration-file/
+#  ╰──────────────────────────────────────────────────────────────────────────────╯
 
 exclude-paths:
   - "megalinter-reports/"
