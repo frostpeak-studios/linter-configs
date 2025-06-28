@@ -60,8 +60,12 @@ configs contain a link to their documentation.
 The following tables list the different tools supported by [MegaLinter](https://megalinter.io/latest/) and whether this
 repo includes a configuration for them or not.
 
-Any entries marked with an asterisk (*) next to their included icon have [exceptions](#exceptions), which are
+Entries marked with an asterisk (*) next to their included icon have [exceptions](#exceptions), which are
 listed at the bottom.
+
+Entries marked with (➖) as their included status do not support configs, possibly due to the tool not supporting
+custom configuration, or MegaLinter not supporting the passing of an external configuration file via env variable.
+In these cases, you may still be able to customize using CLI args or overriding the linter executable.
 
 ### Languages
 
