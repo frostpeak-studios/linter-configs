@@ -1,24 +1,13 @@
 #  ╭──────────────────────────────────────────────────────────────────────────────╮
-#     dictionary.txt - Custom cspell dictionary for Frostpeak Studios projects
+#     extra.txt - Custom CSpell dictionary
 #     Docs:
 #     https://cspell.org/docs/dictionaries/custom-dictionaries
 #  ╰──────────────────────────────────────────────────────────────────────────────╯
 
 # ── General | Misc ─────────────────────────────────────────────────────
-
-accessibilities
-Dont
-finalizer
-finalizers
-misconfig
-pkgs
-UNINDEXED
-uninstantiated
-
-# These two are from valestyles, and despite being ignored in the config,
-# are still caught in the scan from what looks like a cache file in MegaLinter's run.
-AMPM
-Uncomparables
+CPEs
+EPSS
+IWYU
 
 # ── C# | .NET ─────────────────────────────────────────────────────
 
@@ -26,7 +15,7 @@ Avalonia
 Blazor
 Encryptor
 Linq
-roslynator
+Roslynator
 
 # ── Tools | Frameworks ─────────────────────────────────────────────────────
 
@@ -34,6 +23,7 @@ chktex
 clippy
 cljstyle
 cppcheck
+cyclonedx
 detekt
 devskim
 djlint
@@ -70,37 +60,3 @@ SYFT
 tekton
 tflint
 tsqllint
-
-# ── File Types ─────────────────────────────────────────────────────
-
-axaml
-cyclonedx
-dylib
-locproj
-nativeproj
-resx
-slnx
-tmpl
-
-cppcheckignore
-csharpierignore
-csharpierrc
-jsonlintrc
-# .v8rignore triggers a false positive.
-rignore
-
-# ── Code ─────────────────────────────────────────────────────
-
-CPEs
-cref
-epss
-iequatable
-indexof
-isnullorempty
-isnullorwhitespace
-IWYU
-lerp
-
-# .editorconfig rules
-lparen
-rparen
