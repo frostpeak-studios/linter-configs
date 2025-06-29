@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.3] - 2025-06-29
+
+### Fixed
+
+- Various CSpell issues and false positives
+
 ## [1.0.2] - 2025-06-29
 
 ### Added
