@@ -1,6 +1,6 @@
 ---
 #  ╭──────────────────────────────────────────────────────────────────────────────╮
-#     .cspell.config.yml - Configuration file for CSpell
+#     Configuration file for CSpell
 #     Docs:
 #     https://cspell.org/docs/Configuration
 #  ╰──────────────────────────────────────────────────────────────────────────────╯
@@ -12,12 +12,12 @@ version: "0.2"
 
 # ── Config properties ─────────────────────────────────────────────────────────
 
-# Include en-GB as some frameworks use its spelling.
-language: en, en-GB
+language: en
 allowCompoundWords: true
-maxNumberOfProblems: 1000
+maxNumberOfProblems: 100
 noConfigSearch: true
 useGitignore: true
+ignoreRandomStrings: true
 validateDirectives: true
 cache:
   useCache: true
@@ -26,49 +26,45 @@ cache:
 # ── Dictionaries ──────────────────────────────────────────────────────────────
 
 dictionaryDefinitions:
-  - name: dictionary
-    path: "dictionaries/en-base.txt"
+  - name: extra
+    path: "dictionaries/extra.txt"
     addWords: true
 dictionaries:
-  - dictionary
+  - en_US
+  - en-gb
+  - companies
+  - softwareTerms
+  - misc
+  - typescript
+  - node
+  - go
+  - python
+  - powershell
+  - html
+  - css
+  - cpp
+  - csharp
+  - bash
+  - fonts
+  - filetypes
+  - npm
+  - extra
 
 # ── Includes/Excludes ─────────────────────────────────────────────────────────
 
-enableFiletypes:
-  - csharp
-  - dotnet
-  - json
-  - markdown
-  - toml
-  - sql
-  - yaml
-
-files:
-  - ".github/**/*.{md,txt,yaml,yml}"
-  - ".git/COMMIT_EDITMSG"
-  - "*.{json,md,txt,yaml,yml}"
-  - "scripts/**"
-  - "src/**"
-  - "tests/**"
-
 ignorePaths:
-  - ".idea/**"
-  - ".vscode/**"
-  - "**/*.lock"
-  - "**/*.log"
+  # Some ec properties get flagged.
+  - "**/*.editorconfig"
+  # Ignore all ignore files.
+  - "**/.*ignore"
+  # Generated file that gets passed to CSpell during runs for some reason.
+  - "**/*-megalinter_file_names_cspell.txt"
+  # Ignore git directories except for commit messages.
   - "**/.git/!(COMMIT_EDITMSG)"
   - "**/.git/!(COMMIT_EDITMSG)/**"
+  # Ignore this, of course.
   - "**/.cspell.config.yml"
-  - "**/.gitignore"
-  - "**/.trivyignore"
-  # Despite useGitignore being enabled, this was still getting checked.
-  - "**/megalinter-reports/**"
-  - "**/node_modules/**"
-  - "**/bin/**"
-  - "**/build/**"
-  - "**/dist/**"
-  - "**/obj/**"
-  - "**/output/**"
+  # Externally sourced so not ours to fix.
   - "**/valestyles/**"
   # This has a bunch of intentionally misspelled words, different languages, etc.
   - "**/Frostpeak.Testing/Data/**"
