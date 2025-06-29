@@ -31,7 +31,7 @@ degradation so far while using it, so it's not a priority.
 
 #### Rulesets
 
-- [Microsoft .NET Code Analysis](https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview?tabs=net-9)
+- [Microsoft .NET Code Analysis](https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview)
 - [Roslynator Code Analysis Reference](https://josefpihrt.github.io/docs/roslynator/category/code-analysis/)
 - [JetBrains EditorConfig properties](https://www.jetbrains.com/help/rider/Using_EditorConfig.html)
 
