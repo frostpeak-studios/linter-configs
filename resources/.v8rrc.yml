@@ -1,6 +1,6 @@
 ---
 #  ╭──────────────────────────────────────────────────────────────────────────────╮
-#     .v8rrc.yml - Configuration for v8r
+#     Configuration for v8r
 #     Docs:
 #     https://chris48s.github.io/v8r/configuration/
 #  ╰──────────────────────────────────────────────────────────────────────────────╯
@@ -10,4 +10,5 @@
 ignoreErrors: true
 
 # Keep the .ignore file in the config directory to avoid cluttering the project root.
+# cspell:disable-next-line
 ignorePatternFiles: [".gitignore", ".v8rignore"]
