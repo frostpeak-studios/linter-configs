@@ -1,5 +1,5 @@
 #  ╭────────────────────────────────────────────────────────────────────────────────────────────────────╮
-#     .sqlfluff - Configuration for SQLFluff linter
+#     Configuration for SQLFluff linter
 #     Docs:
 #     https://docs.sqlfluff.com/en/stable/configuration/setting_configuration.html#configuration-files
 #  ╰────────────────────────────────────────────────────────────────────────────────────────────────────╯

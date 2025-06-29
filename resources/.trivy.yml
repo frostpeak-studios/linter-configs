@@ -1,6 +1,6 @@
 ---
 #  ╭──────────────────────────────────────────────────────────────────────────────╮
-#     .trivy.yml - Configuration file for trivy vulnerability scanner
+#     Configuration file for trivy vulnerability scanner
 #     Docs:
 #     https://trivy.dev/latest/docs/references/configuration/config-file/
 #  ╰──────────────────────────────────────────────────────────────────────────────╯

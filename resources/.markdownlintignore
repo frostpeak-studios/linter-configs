@@ -1,5 +1,5 @@
 #  ╭──────────────────────────────────────────────────────────────────────────────╮
-#     .markdownlintignore - Whitelist for markdownlint
+#     Ignore list for markdownlint
 #     Docs:
 #     https://github.com/igorshubovych/markdownlint-cli?tab=readme-ov-file#ignoring-files
 #  ╰──────────────────────────────────────────────────────────────────────────────╯

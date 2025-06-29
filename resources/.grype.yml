@@ -1,6 +1,6 @@
 ---
 #  ╭──────────────────────────────────────────────────────────────────────────────╮
-#     .grype.yml - Configuration file for Grype
+#     Configuration file for Grype
 #     Docs:
 #     https://github.com/anchore/grype#configuration
 #  ╰──────────────────────────────────────────────────────────────────────────────╯
