@@ -28,6 +28,7 @@ jobs:
     permissions:
       # Allow the job to write PR comments, etc.
       pull-requests: write
+      statuses: write
 
     steps:
       - name: Checkout code
