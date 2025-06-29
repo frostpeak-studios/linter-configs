@@ -1,6 +1,6 @@
 ---
 #  ╭──────────────────────────────────────────────────────────────────────────────────╮
-#     .clang-format - Configuration file for Clang-Format
+#     Configuration file for Clang-Format
 #     Docs:
 #     https://releases.llvm.org/17.0.1/tools/clang/docs/ClangFormatStyleOptions.html
 #  ╰──────────────────────────────────────────────────────────────────────────────────╯

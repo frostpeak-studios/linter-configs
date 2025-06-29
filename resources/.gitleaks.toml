@@ -1,5 +1,5 @@
 #  ╭──────────────────────────────────────────────────────────────────────────────╮
-#     .gitleaks.toml - Configuration for gitleaks secret scanner
+#     Configuration for gitleaks secret scanner
 #     Docs:
 #     https://github.com/gitleaks/gitleaks/blob/master/config/gitleaks.toml
 #  ╰──────────────────────────────────────────────────────────────────────────────╯

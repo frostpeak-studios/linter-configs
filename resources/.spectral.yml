@@ -1,6 +1,6 @@
 ---
 #  ╭───────────────────────────────────────────────────────────────────────────────────────────╮
-#     .spectral.yml - Configuration for Spectral API linter
+#     Configuration for Spectral API linter
 #     Docs:
 #     https://docs.stoplight.io/docs/spectral/9ffa04e052cc1-spectral-cli#using-a-ruleset-file
 #  ╰───────────────────────────────────────────────────────────────────────────────────────────╯

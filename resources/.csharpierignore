@@ -1,5 +1,5 @@
 #  ╭──────────────────────────────────────────────────────────────────────────────────╮
-#     .csharpierignore - Whitelist for csharpier
+#     Ignore list for CSharpier
 #     Docs:
 #     https://csharpier.com/docs/Ignore
 #  ╰──────────────────────────────────────────────────────────────────────────────────╯

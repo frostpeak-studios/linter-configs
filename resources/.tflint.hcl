@@ -1,5 +1,5 @@
 #  ╭─────────────────────────────────────────────────────────────────────────────────────╮
-#     .tflint.hcl - Configuration for tflint
+#     Configuration for tflint
 #     Docs:
 #     https://github.com/terraform-linters/tflint/blob/master/docs/user-guide/config.md
 #  ╰─────────────────────────────────────────────────────────────────────────────────────╯

@@ -1,5 +1,5 @@
 #  ╭──────────────────────────────────────────────────────────────────────────────────╮
-#     .cppcheckignore - Suppressions for cppcheck
+#     Suppressions for cppcheck
 #     Docs:
 #     https://cppcheck.sourceforge.io/manual.pdf (pg 18)
 #  ╰──────────────────────────────────────────────────────────────────────────────────╯
