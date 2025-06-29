@@ -1,0 +1,16 @@
+---
+#  ╭──────────────────────────────────────────────────────────────────────────────╮
+#     .mega-linter.yml - Configuration for MegaLinter
+#     Docs:
+#     https://megalinter.io/latest/config-file/
+#  ╰──────────────────────────────────────────────────────────────────────────────╯
+
+EXTENDS: https://raw.githubusercontent.com/frostpeak-studios/mega-linter-configs/refs/heads/main/base.yml
+
+LINTER_RULES_PATH: resources
+
+# CLI component overrides
+JSON_PRETTIER_ARGUMENTS: "--ignore-path resources/.prettierignore"
+MARKDOWN_MARKDOWNLINT_ARGUMENTS: "--ignore-path resources/.markdownlintignore"
+REPOSITORY_SECRETLINT_ARGUMENTS: "--secretlintignore resources/.secretlintignore"
+YAML_PRETTIER_ARGUMENTS: "--ignore-path resources/.prettierignore"

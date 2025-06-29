@@ -9,17 +9,17 @@ PR to add config(s) that are missing from the collection.
 ## Table of Contents
 
 - [Getting Started](#getting-started)
-  - [Remote Linking](#remote-linking)
-  - [Submodule](#submodule)
+    - [Remote Linking](#remote-linking)
+    - [Submodule](#submodule)
 - [Configs](#configs)
-  - [Languages](#languages)
-  - [Formats](#formats)
-  - [Tooling](#tooling)
-  - [Other/Repository](#otherrepository)
-  - [Exceptions](#exceptions)
-    - [.NET](#net)
-    - [Prettier](#prettier)
-    - [Proselint](#proselint)
+    - [Languages](#languages)
+    - [Formats](#formats)
+    - [Tooling](#tooling)
+    - [Other/Repository](#otherrepository)
+    - [Exceptions](#exceptions)
+        - [.NET](#net)
+        - [Prettier](#prettier)
+        - [Proselint](#proselint)
 
 [.NET analyzers](dotnet/README.md)
 

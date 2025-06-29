@@ -10,4 +10,4 @@
 ignoreErrors: true
 
 # Keep the .ignore file in the config directory to avoid cluttering the project root.
-ignorePatternFiles: [ ".gitignore", ".v8rignore" ]
+ignorePatternFiles: [".gitignore", ".v8rignore"]

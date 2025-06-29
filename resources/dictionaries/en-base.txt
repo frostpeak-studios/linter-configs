@@ -7,10 +7,12 @@
 # ── General | Misc ─────────────────────────────────────────────────────
 
 accessibilities
+Dont
 finalizer
 finalizers
 misconfig
 pkgs
+UNINDEXED
 uninstantiated
 
 # These two are from valestyles, and despite being ignored in the config,
@@ -24,37 +26,79 @@ Avalonia
 Blazor
 Encryptor
 Linq
+roslynator
 
 # ── Tools | Frameworks ─────────────────────────────────────────────────────
 
+chktex
+clippy
+cljstyle
+cppcheck
+detekt
 devskim
+djlint
+dustilock
 Fmod
+golangci
+isort
 KICS
+kondo
+ktlint
+kubeconform
+kubescape
+lintr
+luacheck
 msbuild
+mypy
+phpcs
 platyps
 psscriptanalyzer
 pwsh
+pylint
+pyright
 Qodana
 qodo
+raku
+rstcheck
+rstfmt
+rubocop
+sfdx
+shfmt
+snakefmt
+stylua
+SYFT
+tekton
 tflint
+tsqllint
 
 # ── File Types ─────────────────────────────────────────────────────
 
 axaml
+cyclonedx
 dylib
 locproj
 nativeproj
 resx
 slnx
+tmpl
 
+cppcheckignore
 csharpierignore
+csharpierrc
 jsonlintrc
 # .v8rignore triggers a false positive.
 rignore
 
 # ── Code ─────────────────────────────────────────────────────
 
+CPEs
 cref
+epss
+iequatable
+indexof
+isnullorempty
+isnullorwhitespace
+IWYU
 lerp
 
 # .editorconfig rules
