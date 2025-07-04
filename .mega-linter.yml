@@ -5,7 +5,7 @@
 #     https://megalinter.io/latest/config-file/
 #  ╰──────────────────────────────────────────────────────────────────────────────╯
 
-EXTENDS: https://raw.githubusercontent.com/frostpeak-studios/mega-linter-configs/refs/heads/main/base.yml
+EXTENDS: https://raw.githubusercontent.com/frostpeak-studios/mega-linter-configs/refs/heads/main/.mega-linter.yml
 
 LINTER_RULES_PATH: resources
 
