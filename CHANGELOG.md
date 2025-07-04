@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4] - 2025-07-04
+
+### Fixed
+
+- Incorrect XML rule in .NET editorconfig
+- Missing glob pattern for v8rignore file
+
 ## [1.0.3] - 2025-06-29
 
 ### Fixed
