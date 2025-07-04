@@ -2,6 +2,10 @@
 
 ## [1.0.5] - 2025-07-04
 
+### Added
+
+- Unrecognized file names to CSpell dictionary
+
 ### Fixed
 
 - CSpell not ignoring `.gitattributes` and `.gitmodules` files
