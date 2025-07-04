@@ -2,10 +2,14 @@
 
 ## [1.0.4] - 2025-07-04
 
+### Changed
+
+- Updated mega linter config to use the new remote base config file
+
 ### Fixed
 
 - Incorrect XML rule in .NET editorconfig
-- Missing glob pattern for v8rignore file
+- Missing glob pattern for v8r ignore file
 
 ## [1.0.3] - 2025-06-29
 
