@@ -9,3 +9,8 @@ printWidth: 120
 useTabs: false
 indentSize: 4
 endOfLine: lf
+
+# Need to explicitly override the XML default value for indent size.
+overrides:
+  - files: "*.{axaml,xaml,xml,resx,props,manifest,csproj,sln,targets,nuspec}"
+    indentSize: 4
