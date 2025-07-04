@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5] - 2025-07-04
+
+### Fixed
+
+- CSpell not ignoring `.gitattributes` and `.gitmodules` files
+- CSharpier overriding XML/MSBuild props indent size
+
 ## [1.0.4] - 2025-07-04
 
 ### Changed
