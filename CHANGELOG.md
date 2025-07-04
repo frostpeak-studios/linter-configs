@@ -2,6 +2,10 @@
 
 ## [1.0.4] - 2025-07-04
 
+### Changed
+
+- Updated mega linter config to use the new remote base config file
+
 ### Fixed
 
 - Incorrect XML rule in .NET editorconfig
