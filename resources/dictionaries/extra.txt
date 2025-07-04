@@ -12,9 +12,11 @@ IWYU
 # ── C# | .NET ─────────────────────────────────────────────────────
 
 Avalonia
+axaml
 Blazor
 Encryptor
 Linq
+resx
 Roslynator
 
 # ── Tools | Frameworks ─────────────────────────────────────────────────────
