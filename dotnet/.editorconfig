@@ -80,15 +80,12 @@ ij_wrap_on_typing = false
 
 # ── Config Files (non-XML) ────────────────────────────────────────────────────
 
-[*.{yml,yaml,toml,json,ini,config,cfg,properties,editorconfig}]
+[*.{yml,yaml,toml,json,ini,config,cfg,properties,editorconfig,[Xx]aml[Ss]tyler}]
 # Don't force wrapping, as it may break some attribute's values.
 max_line_length = off
 
-# Some of these commonly use 2 spaces, but we'll force
-# everything to 4 because it limits how much nesting
-# is comfortable to work with, which can help us
-# avoid some spaghetti or overly-complex designs.
-# Uncomment the line below if you wish to use 2 spaces.
+# Uncomment the line below if you wish to use 2 spaces for all.
+# By default we use 2 for YAML and 4 for everything else.
 #indent_size = 2
 
 # EditorConfig
@@ -289,7 +286,7 @@ max_line_length = off
 
 resharper_xmldoc_blank_line_after_pi = false
 resharper_xmldoc_indent_child_elements = ZeroIndent
-resharper_xmldoc_indent_size = 2
+resharper_xmldoc_indent_size = 4
 resharper_xmldoc_linebreaks_inside_tags_for_elements_longer_than = 25
 resharper_xmldoc_linebreaks_inside_tags_for_elements_with_child_elements = false
 resharper_xmldoc_linebreak_before_multiline_elements = false
@@ -1610,7 +1607,9 @@ dotnet_diagnostic.IDE0057.severity = suggestion
 csharp_style_prefer_range_operator = true
 
 # IDE0058: Remove unused expression value
-dotnet_diagnostic.IDE0058.severity = suggestion
+# Justification: Discard variables everywhere clutters the code
+# and breaks the formatting flow of some expressions.
+dotnet_diagnostic.IDE0058.severity = silent
 csharp_style_unused_value_expression_statement_preference = discard_variable
 
 # IDE0059: Remove unnecessary value assignment
@@ -1996,154 +1995,154 @@ dotnet_naming_rule.members_should_be_pascal_case.severity = suggestion
 # ───────────────────────── Formatting Rules (RCS0xxx) ─────────────────────────
 
 # RCS0001: Add blank line after embedded statement
-dotnet_diagnostic.RCS0001.severity = none
+dotnet_diagnostic.RCS0001.severity = suggestion
 
 # RCS0002: Add blank line after #region
-dotnet_diagnostic.RCS0002.severity = none
+dotnet_diagnostic.RCS0002.severity = suggestion
 
 # RCS0003: Add blank line after using directive list
-dotnet_diagnostic.RCS0003.severity = none
+dotnet_diagnostic.RCS0003.severity = suggestion
 
 # RCS0005: Add blank line before #endregion
-dotnet_diagnostic.RCS0005.severity = none
+dotnet_diagnostic.RCS0005.severity = suggestion
 
 # RCS0006: Add blank line before using directive list
-dotnet_diagnostic.RCS0006.severity = none
+dotnet_diagnostic.RCS0006.severity = suggestion
 
 # RCS0007: Add blank line between accessors
-dotnet_diagnostic.RCS0007.severity = none
+dotnet_diagnostic.RCS0007.severity = suggestion
 
 # RCS0008: Add blank line between closing brace and next statement
-dotnet_diagnostic.RCS0008.severity = none
+dotnet_diagnostic.RCS0008.severity = suggestion
 
 # RCS0009: Add blank line between declaration and documentation comment
-dotnet_diagnostic.RCS0009.severity = none
+dotnet_diagnostic.RCS0009.severity = suggestion
 
 # RCS0010: Add blank line between declarations
-dotnet_diagnostic.RCS0010.severity = none
+dotnet_diagnostic.RCS0010.severity = suggestion
 
 # RCS0011: Add/remove blank line between single-line accessors
-dotnet_diagnostic.RCS0011.severity = none
+dotnet_diagnostic.RCS0011.severity = suggestion
 
 # RCS0012: Add blank line between single-line declarations
-dotnet_diagnostic.RCS0012.severity = none
+dotnet_diagnostic.RCS0012.severity = suggestion
 
 # RCS0013: Add blank line between single-line declarations of different kind
-dotnet_diagnostic.RCS0013.severity = none
+dotnet_diagnostic.RCS0013.severity = suggestion
 
 # RCS0015: Add/remove blank line between using directives
-dotnet_diagnostic.RCS0015.severity = none
+dotnet_diagnostic.RCS0015.severity = suggestion
 
 # RCS0016: Put attribute list on its own line
-dotnet_diagnostic.RCS0016.severity = none
+dotnet_diagnostic.RCS0016.severity = suggestion
 
 # RCS0020: Format accessor's braces on a single line or multiple lines
-dotnet_diagnostic.RCS0020.severity = none
+dotnet_diagnostic.RCS0020.severity = suggestion
 
 # RCS0021: Format block's braces on a single line or multiple lines
-dotnet_diagnostic.RCS0021.severity = none
+dotnet_diagnostic.RCS0021.severity = suggestion
 
 # RCS0023: Format type declaration's braces
-dotnet_diagnostic.RCS0023.severity = none
+dotnet_diagnostic.RCS0023.severity = suggestion
 
 # RCS0024: Add new line after switch label
-dotnet_diagnostic.RCS0024.severity = none
+dotnet_diagnostic.RCS0024.severity = suggestion
 
 # RCS0025: Put full accessor on its own line
-dotnet_diagnostic.RCS0025.severity = none
+dotnet_diagnostic.RCS0025.severity = suggestion
 
 # RCS0027: Place new line after/before binary operator
-dotnet_diagnostic.RCS0027.severity = none
+dotnet_diagnostic.RCS0027.severity = suggestion
 
 # RCS0028: Place new line after/before '?:' operator
-dotnet_diagnostic.RCS0028.severity = none
+dotnet_diagnostic.RCS0028.severity = suggestion
 
 # RCS0029: Put constructor initializer on its own line
-dotnet_diagnostic.RCS0029.severity = none
+dotnet_diagnostic.RCS0029.severity = suggestion
 
 # RCS0030: Put embedded statement on its own line
-dotnet_diagnostic.RCS0030.severity = none
+dotnet_diagnostic.RCS0030.severity = suggestion
 
 # RCS0031: Put enum member on its own line
-dotnet_diagnostic.RCS0031.severity = none
+dotnet_diagnostic.RCS0031.severity = suggestion
 
 # RCS0032: Place new line after/before arrow token
-dotnet_diagnostic.RCS0032.severity = none
+dotnet_diagnostic.RCS0032.severity = suggestion
 
 # RCS0033: Put statement on its own line
-dotnet_diagnostic.RCS0033.severity = none
+dotnet_diagnostic.RCS0033.severity = suggestion
 
 # RCS0034: Put type parameter constraint on its own line
-dotnet_diagnostic.RCS0034.severity = none
+dotnet_diagnostic.RCS0034.severity = suggestion
 
 # RCS0036: Remove blank line between single-line declarations of same kind
-dotnet_diagnostic.RCS0036.severity = none
+dotnet_diagnostic.RCS0036.severity = suggestion
 
 # RCS0039: Remove new line before base list
-dotnet_diagnostic.RCS0039.severity = none
+dotnet_diagnostic.RCS0039.severity = suggestion
 
 # RCS0041: Remove new line between 'if' keyword and 'else' keyword
-dotnet_diagnostic.RCS0041.severity = none
+dotnet_diagnostic.RCS0041.severity = suggestion
 
 # RCS0042: Put auto-accessors on a single line
-dotnet_diagnostic.RCS0042.severity = none
+dotnet_diagnostic.RCS0042.severity = suggestion
 
 # RCS0044: Use carriage return + linefeed as new line
 dotnet_diagnostic.RCS0044.severity = none
 
 # RCS0045: Use linefeed as new line
-dotnet_diagnostic.RCS0045.severity = none
+dotnet_diagnostic.RCS0045.severity = suggestion
 
 # RCS0046: Use spaces instead of tab
-dotnet_diagnostic.RCS0046.severity = none
+dotnet_diagnostic.RCS0046.severity = suggestion
 
 # RCS0048: Put initializer on a single line
-dotnet_diagnostic.RCS0048.severity = none
+dotnet_diagnostic.RCS0048.severity = suggestion
 
 # RCS0049: Add blank line after top comment
-dotnet_diagnostic.RCS0049.severity = none
+dotnet_diagnostic.RCS0049.severity = suggestion
 
 # RCS0050: Add blank line before top declaration
-dotnet_diagnostic.RCS0050.severity = none
+dotnet_diagnostic.RCS0050.severity = suggestion
 
 # RCS0051: Add/remove new line before 'while' in 'do' statement
-dotnet_diagnostic.RCS0051.severity = none
+dotnet_diagnostic.RCS0051.severity = suggestion
 
 # RCS0052: Place new line after/before equals token
-dotnet_diagnostic.RCS0052.severity = none
+dotnet_diagnostic.RCS0052.severity = suggestion
 
 # RCS0053: Fix formatting of a list
-dotnet_diagnostic.RCS0053.severity = none
+dotnet_diagnostic.RCS0053.severity = suggestion
 
 # RCS0054: Fix formatting of a call chain
-dotnet_diagnostic.RCS0054.severity = none
+dotnet_diagnostic.RCS0054.severity = suggestion
 
 # RCS0055: Fix formatting of a binary expression chain
-dotnet_diagnostic.RCS0055.severity = none
+dotnet_diagnostic.RCS0055.severity = suggestion
 
 # RCS0056: A line is too long
-dotnet_diagnostic.RCS0056.severity = none
+dotnet_diagnostic.RCS0056.severity = suggestion
 
 # RCS0057: Normalize whitespace at the beginning of a file
-dotnet_diagnostic.RCS0057.severity = none
+dotnet_diagnostic.RCS0057.severity = suggestion
 
 # RCS0058: Normalize whitespace at the end of a file
-dotnet_diagnostic.RCS0058.severity = none
+dotnet_diagnostic.RCS0058.severity = suggestion
 
 # RCS0059: Place new line after/before null-conditional operator
-dotnet_diagnostic.RCS0059.severity = none
+dotnet_diagnostic.RCS0059.severity = suggestion
 
 # RCS0060: Add/remove line after file scoped namespace declaration
-dotnet_diagnostic.RCS0060.severity = none
+dotnet_diagnostic.RCS0060.severity = suggestion
 
 # RCS0061: Add/remove blank line between switch sections
-dotnet_diagnostic.RCS0061.severity = none
+dotnet_diagnostic.RCS0061.severity = suggestion
 
 # RCS0062: Put expression body on its own line
-dotnet_diagnostic.RCS0062.severity = none
+dotnet_diagnostic.RCS0062.severity = suggestion
 
 # RCS0063: Remove unnecessary blank line
-dotnet_diagnostic.RCS0063.severity = none
+dotnet_diagnostic.RCS0063.severity = suggestion
 
 # ─────────────────────── Code Analysis Rules (RCS1xxx) ────────────────────────
 
@@ -2160,31 +2159,31 @@ dotnet_diagnostic.RCS1003.severity = suggestion
 dotnet_diagnostic.RCS1004.severity = none
 
 # RCS1005: Simplify nested using statement
-dotnet_diagnostic.RCS1005.severity = silent
+dotnet_diagnostic.RCS1005.severity = suggestion
 
 # RCS1006: Merge 'else' with nested 'if'
-dotnet_diagnostic.RCS1006.severity = silent
+dotnet_diagnostic.RCS1006.severity = suggestion
 
 # RCS1007: Add braces
-dotnet_diagnostic.RCS1007.severity = none
+dotnet_diagnostic.RCS1007.severity = suggestion
 
 # RCS1013: Use predefined type
-dotnet_diagnostic.RCS1013.severity = none
+dotnet_diagnostic.RCS1013.severity = suggestion
 
 # RCS1014: Use explicitly/implicitly typed array
-dotnet_diagnostic.RCS1014.severity = none
+dotnet_diagnostic.RCS1014.severity = suggestion
 
 # RCS1015: Use nameof operator
 dotnet_diagnostic.RCS1015.severity = suggestion
 
 # RCS1016: Use block body or expression body
-dotnet_diagnostic.RCS1016.severity = none
+dotnet_diagnostic.RCS1016.severity = suggestion
 
 # RCS1018: Add/remove accessibility modifiers
-dotnet_diagnostic.RCS1018.severity = none
+dotnet_diagnostic.RCS1018.severity = suggestion
 
 # RCS1019: Order modifiers
-dotnet_diagnostic.RCS1019.severity = none
+dotnet_diagnostic.RCS1019.severity = suggestion
 
 # RCS1020: Simplify Nullable<T> to T?
 dotnet_diagnostic.RCS1020.severity = suggestion
@@ -2193,7 +2192,7 @@ dotnet_diagnostic.RCS1020.severity = suggestion
 dotnet_diagnostic.RCS1021.severity = suggestion
 
 # RCS1031: Remove unnecessary braces in switch section
-dotnet_diagnostic.RCS1031.severity = silent
+dotnet_diagnostic.RCS1031.severity = suggestion
 
 # RCS1032: Remove redundant parentheses
 dotnet_diagnostic.RCS1032.severity = suggestion
@@ -2202,16 +2201,16 @@ dotnet_diagnostic.RCS1032.severity = suggestion
 dotnet_diagnostic.RCS1033.severity = suggestion
 
 # RCS1034: Remove redundant 'sealed' modifier
-dotnet_diagnostic.RCS1034.severity = silent
+dotnet_diagnostic.RCS1034.severity = suggestion
 
 # RCS1037: Remove trailing white-space
 dotnet_diagnostic.RCS1037.severity = suggestion
 
 # RCS1039: Remove argument list from attribute
-dotnet_diagnostic.RCS1039.severity = silent
+dotnet_diagnostic.RCS1039.severity = suggestion
 
 # RCS1042: Remove enum default underlying type
-dotnet_diagnostic.RCS1042.severity = silent
+dotnet_diagnostic.RCS1042.severity = suggestion
 
 # RCS1043: Remove 'partial' modifier from type with a single part
 dotnet_diagnostic.RCS1043.severity = silent
@@ -2220,7 +2219,7 @@ dotnet_diagnostic.RCS1043.severity = silent
 dotnet_diagnostic.RCS1044.severity = warning
 
 # RCS1046: Asynchronous method name should end with 'Async'
-dotnet_diagnostic.RCS1046.severity = none
+dotnet_diagnostic.RCS1046.severity = suggestion
 
 # RCS1047: Non-asynchronous method name should not end with 'Async'
 dotnet_diagnostic.RCS1047.severity = suggestion
@@ -2232,19 +2231,19 @@ dotnet_diagnostic.RCS1048.severity = suggestion
 dotnet_diagnostic.RCS1049.severity = suggestion
 
 # RCS1050: Include/omit parentheses when creating new object
-dotnet_diagnostic.RCS1050.severity = none
+dotnet_diagnostic.RCS1050.severity = suggestion
 
 # RCS1051: Add/remove parentheses from condition in conditional operator
-dotnet_diagnostic.RCS1051.severity = none
+dotnet_diagnostic.RCS1051.severity = suggestion
 
 # RCS1052: Declare each attribute separately
-dotnet_diagnostic.RCS1052.severity = none
+dotnet_diagnostic.RCS1052.severity = suggestion
 
 # RCS1055: Unnecessary semicolon at the end of declaration
-dotnet_diagnostic.RCS1055.severity = silent
+dotnet_diagnostic.RCS1055.severity = suggestion
 
 # RCS1056: Avoid usage of using alias directive
-dotnet_diagnostic.RCS1056.severity = none
+dotnet_diagnostic.RCS1056.severity = suggestion
 
 # RCS1058: Use compound assignment
 dotnet_diagnostic.RCS1058.severity = suggestion
@@ -2253,28 +2252,28 @@ dotnet_diagnostic.RCS1058.severity = suggestion
 dotnet_diagnostic.RCS1059.severity = warning
 
 # RCS1060: Declare each type in separate file
-dotnet_diagnostic.RCS1060.severity = none
+dotnet_diagnostic.RCS1060.severity = suggestion
 
 # RCS1061: Merge 'if' with nested 'if'
-dotnet_diagnostic.RCS1061.severity = silent
+dotnet_diagnostic.RCS1061.severity = suggestion
 
 # RCS1068: Simplify logical negation
 dotnet_diagnostic.RCS1068.severity = suggestion
 
 # RCS1069: Remove unnecessary case label
-dotnet_diagnostic.RCS1069.severity = silent
+dotnet_diagnostic.RCS1069.severity = suggestion
 
 # RCS1070: Remove redundant default switch section
-dotnet_diagnostic.RCS1070.severity = silent
+dotnet_diagnostic.RCS1070.severity = suggestion
 
 # RCS1071: Remove redundant base constructor call
-dotnet_diagnostic.RCS1071.severity = silent
+dotnet_diagnostic.RCS1071.severity = suggestion
 
 # RCS1073: Convert 'if' to 'return' statement
 dotnet_diagnostic.RCS1073.severity = suggestion
 
 # RCS1074: Remove redundant constructor
-dotnet_diagnostic.RCS1074.severity = silent
+dotnet_diagnostic.RCS1074.severity = suggestion
 
 # RCS1075: Avoid empty catch clause that catches System.Exception
 dotnet_diagnostic.RCS1075.severity = warning
@@ -2283,16 +2282,16 @@ dotnet_diagnostic.RCS1075.severity = warning
 dotnet_diagnostic.RCS1077.severity = suggestion
 
 # RCS1078: Use "" or 'string.Empty'
-dotnet_diagnostic.RCS1078.severity = none
+dotnet_diagnostic.RCS1078.severity = suggestion
 
 # RCS1079: Throwing of new NotImplementedException
-dotnet_diagnostic.RCS1079.severity = none
+dotnet_diagnostic.RCS1079.severity = suggestion
 
 # RCS1080: Use 'Count/Length' property instead of 'Any' method
-dotnet_diagnostic.RCS1080.severity = none
+dotnet_diagnostic.RCS1080.severity = suggestion
 
 # RCS1081: Split variable declaration
-dotnet_diagnostic.RCS1081.severity = none
+dotnet_diagnostic.RCS1081.severity = suggestion
 
 # RCS1084: Use coalesce expression instead of conditional expression
 dotnet_diagnostic.RCS1084.severity = suggestion
@@ -2304,16 +2303,16 @@ dotnet_diagnostic.RCS1085.severity = suggestion
 dotnet_diagnostic.RCS1089.severity = suggestion
 
 # RCS1090: Add/remove 'ConfigureAwait(false)' call
-dotnet_diagnostic.RCS1090.severity = none
+dotnet_diagnostic.RCS1090.severity = suggestion
 
 # RCS1093: File contains no code
 dotnet_diagnostic.RCS1093.severity = suggestion
 
 # RCS1094: Declare using directive on top level
-dotnet_diagnostic.RCS1094.severity = none
+dotnet_diagnostic.RCS1094.severity = suggestion
 
 # RCS1096: Use 'HasFlag' method or bitwise operator
-dotnet_diagnostic.RCS1096.severity = none
+dotnet_diagnostic.RCS1096.severity = suggestion
 
 # RCS1097: Remove redundant 'ToString' call
 dotnet_diagnostic.RCS1097.severity = suggestion
@@ -2346,7 +2345,7 @@ dotnet_diagnostic.RCS1108.severity = suggestion
 dotnet_diagnostic.RCS1110.severity = suggestion
 
 # RCS1111: Add braces to switch section with multiple statements
-dotnet_diagnostic.RCS1111.severity = none
+dotnet_diagnostic.RCS1111.severity = suggestion
 
 # RCS1112: Combine 'Enumerable.Where' method chain
 dotnet_diagnostic.RCS1112.severity = suggestion
@@ -2364,16 +2363,16 @@ dotnet_diagnostic.RCS1118.severity = suggestion
 dotnet_diagnostic.RCS1123.severity = suggestion
 
 # RCS1124: Inline local variable
-dotnet_diagnostic.RCS1124.severity = silent
+dotnet_diagnostic.RCS1124.severity = suggestion
 
 # RCS1126: Add braces to if-else
-dotnet_diagnostic.RCS1126.severity = none
+dotnet_diagnostic.RCS1126.severity = suggestion
 
 # RCS1128: Use coalesce expression
 dotnet_diagnostic.RCS1128.severity = suggestion
 
 # RCS1129: Remove redundant field initialization
-dotnet_diagnostic.RCS1129.severity = silent
+dotnet_diagnostic.RCS1129.severity = suggestion
 
 # RCS1130: Bitwise operation on enum without Flags attribute
 dotnet_diagnostic.RCS1130.severity = suggestion
@@ -2382,16 +2381,16 @@ dotnet_diagnostic.RCS1130.severity = suggestion
 dotnet_diagnostic.RCS1132.severity = suggestion
 
 # RCS1133: Remove redundant Dispose/Close call
-dotnet_diagnostic.RCS1133.severity = silent
+dotnet_diagnostic.RCS1133.severity = suggestion
 
 # RCS1134: Remove redundant statement
-dotnet_diagnostic.RCS1134.severity = silent
+dotnet_diagnostic.RCS1134.severity = suggestion
 
 # RCS1135: Declare enum member with zero value (when enum has FlagsAttribute)
 dotnet_diagnostic.RCS1135.severity = suggestion
 
 # RCS1136: Merge switch sections with equivalent content
-dotnet_diagnostic.RCS1136.severity = silent
+dotnet_diagnostic.RCS1136.severity = suggestion
 
 # RCS1138: Add summary to documentation comment
 dotnet_diagnostic.RCS1138.severity = warning
@@ -2400,25 +2399,25 @@ dotnet_diagnostic.RCS1138.severity = warning
 dotnet_diagnostic.RCS1139.severity = warning
 
 # RCS1140: Add exception to documentation comment
-dotnet_diagnostic.RCS1140.severity = silent
+dotnet_diagnostic.RCS1140.severity = suggestion
 
 # RCS1141: Add 'param' element to documentation comment
-dotnet_diagnostic.RCS1141.severity = silent
+dotnet_diagnostic.RCS1141.severity = suggestion
 
 # RCS1142: Add 'typeparam' element to documentation comment
-dotnet_diagnostic.RCS1142.severity = silent
+dotnet_diagnostic.RCS1142.severity = suggestion
 
 # RCS1143: Simplify coalesce expression
-dotnet_diagnostic.RCS1143.severity = silent
+dotnet_diagnostic.RCS1143.severity = suggestion
 
 # RCS1145: Remove redundant 'as' operator
-dotnet_diagnostic.RCS1145.severity = silent
+dotnet_diagnostic.RCS1145.severity = suggestion
 
 # RCS1146: Use conditional access
 dotnet_diagnostic.RCS1146.severity = suggestion
 
 # RCS1151: Remove redundant cast
-dotnet_diagnostic.RCS1151.severity = silent
+dotnet_diagnostic.RCS1151.severity = suggestion
 
 # RCS1154: Sort enum members
 dotnet_diagnostic.RCS1154.severity = suggestion
@@ -2442,10 +2441,10 @@ dotnet_diagnostic.RCS1159.severity = suggestion
 dotnet_diagnostic.RCS1160.severity = suggestion
 
 # RCS1161: Enum should declare explicit values
-dotnet_diagnostic.RCS1161.severity = silent
+dotnet_diagnostic.RCS1161.severity = suggestion
 
 # RCS1162: Avoid chain of assignments
-dotnet_diagnostic.RCS1162.severity = none
+dotnet_diagnostic.RCS1162.severity = suggestion
 
 # RCS1163: Unused parameter
 dotnet_diagnostic.RCS1163.severity = suggestion
@@ -2454,13 +2453,13 @@ dotnet_diagnostic.RCS1163.severity = suggestion
 dotnet_diagnostic.RCS1164.severity = suggestion
 
 # RCS1165: Unconstrained type parameter checked for null
-dotnet_diagnostic.RCS1165.severity = silent
+dotnet_diagnostic.RCS1165.severity = suggestion
 
 # RCS1166: Value type object is never equal to null
 dotnet_diagnostic.RCS1166.severity = suggestion
 
 # RCS1168: Parameter name differs from base name
-dotnet_diagnostic.RCS1168.severity = silent
+dotnet_diagnostic.RCS1168.severity = suggestion
 
 # RCS1169: Make field read-only
 dotnet_diagnostic.RCS1169.severity = suggestion
@@ -2478,7 +2477,7 @@ dotnet_diagnostic.RCS1172.severity = warning
 dotnet_diagnostic.RCS1173.severity = suggestion
 
 # RCS1174: Remove redundant async/await
-dotnet_diagnostic.RCS1174.severity = none
+dotnet_diagnostic.RCS1174.severity = suggestion
 
 # RCS1175: Unused 'this' parameter
 dotnet_diagnostic.RCS1175.severity = suggestion
@@ -2490,22 +2489,22 @@ dotnet_diagnostic.RCS1179.severity = suggestion
 dotnet_diagnostic.RCS1180.severity = suggestion
 
 # RCS1181: Convert comment to documentation comment
-dotnet_diagnostic.RCS1181.severity = silent
+dotnet_diagnostic.RCS1181.severity = suggestion
 
 # RCS1182: Remove redundant base interface
-dotnet_diagnostic.RCS1182.severity = silent
+dotnet_diagnostic.RCS1182.severity = suggestion
 
 # RCS1186: Use Regex instance instead of static method
-dotnet_diagnostic.RCS1186.severity = silent
+dotnet_diagnostic.RCS1186.severity = suggestion
 
 # RCS1187: Use constant instead of field
 dotnet_diagnostic.RCS1187.severity = suggestion
 
 # RCS1188: Remove redundant auto-property initialization
-dotnet_diagnostic.RCS1188.severity = silent
+dotnet_diagnostic.RCS1188.severity = suggestion
 
 # RCS1189: Add or remove region name
-dotnet_diagnostic.RCS1189.severity = silent
+dotnet_diagnostic.RCS1189.severity = suggestion
 
 # RCS1190: Join string expressions
 dotnet_diagnostic.RCS1190.severity = suggestion
@@ -2532,7 +2531,7 @@ dotnet_diagnostic.RCS1196.severity = suggestion
 dotnet_diagnostic.RCS1197.severity = suggestion
 
 # RCS1198: Avoid unnecessary boxing of value type
-dotnet_diagnostic.RCS1198.severity = none
+dotnet_diagnostic.RCS1198.severity = suggestion
 
 # RCS1199: Unnecessary null check
 dotnet_diagnostic.RCS1199.severity = suggestion
@@ -2541,7 +2540,7 @@ dotnet_diagnostic.RCS1199.severity = suggestion
 dotnet_diagnostic.RCS1200.severity = suggestion
 
 # RCS1201: Use method chaining
-dotnet_diagnostic.RCS1201.severity = silent
+dotnet_diagnostic.RCS1201.severity = suggestion
 
 # RCS1202: Avoid NullReferenceException
 dotnet_diagnostic.RCS1202.severity = suggestion
@@ -2559,10 +2558,10 @@ dotnet_diagnostic.RCS1205.severity = suggestion
 dotnet_diagnostic.RCS1206.severity = suggestion
 
 # RCS1207: Use anonymous function or method group
-dotnet_diagnostic.RCS1207.severity = none
+dotnet_diagnostic.RCS1207.severity = suggestion
 
 # RCS1208: Reduce 'if' nesting
-dotnet_diagnostic.RCS1208.severity = none
+dotnet_diagnostic.RCS1208.severity = suggestion
 
 # RCS1209: Order type parameter constraints
 dotnet_diagnostic.RCS1209.severity = suggestion
@@ -2571,7 +2570,7 @@ dotnet_diagnostic.RCS1209.severity = suggestion
 dotnet_diagnostic.RCS1210.severity = warning
 
 # RCS1211: Remove unnecessary 'else'
-dotnet_diagnostic.RCS1211.severity = silent
+dotnet_diagnostic.RCS1211.severity = suggestion
 
 # RCS1212: Remove redundant assignment
 dotnet_diagnostic.RCS1212.severity = suggestion
@@ -2589,7 +2588,7 @@ dotnet_diagnostic.RCS1215.severity = warning
 dotnet_diagnostic.RCS1216.severity = suggestion
 
 # RCS1217: Convert interpolated string to concatenation
-dotnet_diagnostic.RCS1217.severity = silent
+dotnet_diagnostic.RCS1217.severity = suggestion
 
 # RCS1218: Simplify code branching
 dotnet_diagnostic.RCS1218.severity = suggestion
@@ -2604,7 +2603,7 @@ dotnet_diagnostic.RCS1221.severity = suggestion
 dotnet_diagnostic.RCS1222.severity = suggestion
 
 # RCS1223: Mark publicly visible type with DebuggerDisplay attribute
-dotnet_diagnostic.RCS1223.severity = none
+dotnet_diagnostic.RCS1223.severity = suggestion
 
 # RCS1224: Make method an extension method
 dotnet_diagnostic.RCS1224.severity = suggestion
@@ -3369,528 +3368,528 @@ roslynator_refactoring.deconstruct_foreach_variable.enabled = true
 # ════════════ Roslynator Code Fixes for Compiler Diagnostics Rules ════════════
 
 # CS0019: Operator 'operator' cannot be applied to operands of type 'type' and 'type'
-roslynator_fix.CS0019.enabled = true
+roslynator_compiler_diagnostic_fix.CS0019.enabled = true
 
 # CS0021: Cannot apply indexing with [] to an expression of type 'type'
-roslynator_fix.CS0021.enabled = true
+roslynator_compiler_diagnostic_fix.CS0021.enabled = true
 
 # CS0023: Operator 'operator' cannot be applied to operand of type 'type'
-roslynator_fix.CS0023.enabled = true
+roslynator_compiler_diagnostic_fix.CS0023.enabled = true
 
 # CS0029: Cannot implicitly convert type 'type' to 'type'
-roslynator_fix.CS0029.enabled = true
+roslynator_compiler_diagnostic_fix.CS0029.enabled = true
 
 # CS0030: Cannot convert type 'type' to 'type'
-roslynator_fix.CS0030.enabled = true
+roslynator_compiler_diagnostic_fix.CS0030.enabled = true
 
 # CS0037: Cannot convert null to 'type' because it is a non-nullable value type
-roslynator_fix.CS0037.enabled = true
+roslynator_compiler_diagnostic_fix.CS0037.enabled = true
 
 # CS0069: An event in an interface cannot have add or remove accessors
-roslynator_fix.CS0069.enabled = true
+roslynator_compiler_diagnostic_fix.CS0069.enabled = true
 
 # CS0077: The as operator must be used with a reference type or nullable type ('type' is a non-nullable value type)
-roslynator_fix.CS0077.enabled = true
+roslynator_compiler_diagnostic_fix.CS0077.enabled = true
 
 # CS0080: Constraints are not allowed on non-generic declarations
-roslynator_fix.CS0080.enabled = true
+roslynator_compiler_diagnostic_fix.CS0080.enabled = true
 
 # CS0101: The namespace 'namespace' already contains a definition for 'type'
-roslynator_fix.CS0101.enabled = true
+roslynator_compiler_diagnostic_fix.CS0101.enabled = true
 
 # CS0102: The type 'type name' already contains a definition for 'identifier'
-roslynator_fix.CS0102.enabled = true
+roslynator_compiler_diagnostic_fix.CS0102.enabled = true
 
 # CS0103: The name 'identifier' does not exist in the current context
-roslynator_fix.CS0103.enabled = true
+roslynator_compiler_diagnostic_fix.CS0103.enabled = true
 
 # CS0107: More than one protection modifier
-roslynator_fix.CS0107.enabled = true
+roslynator_compiler_diagnostic_fix.CS0107.enabled = true
 
 # CS0109: The member 'member' does not hide an inherited member. The new keyword is not required
-roslynator_fix.CS0109.enabled = true
+roslynator_compiler_diagnostic_fix.CS0109.enabled = true
 
 # CS0112: A static member 'function' cannot be marked as override, virtual or abstract
-roslynator_fix.CS0112.enabled = true
+roslynator_compiler_diagnostic_fix.CS0112.enabled = true
 
 # CS0114: 'function1' hides inherited member 'function2'. To make the current method override that implementation,
 # add the override keyword. Otherwise add the new keyword
-roslynator_fix.CS0114.enabled = true
+roslynator_compiler_diagnostic_fix.CS0114.enabled = true
 
 # CS0115: 'function': no suitable method found to override
-roslynator_fix.CS0115.enabled = true
+roslynator_compiler_diagnostic_fix.CS0115.enabled = true
 
 # CS0119: 'identifier' is a 'construct', which is not valid in the given context
-roslynator_fix.CS0119.enabled = true
+roslynator_compiler_diagnostic_fix.CS0119.enabled = true
 
 # CS0120: An object reference is required for the nonstatic field, method, or property 'member'
-roslynator_fix.CS0120.enabled = true
+roslynator_compiler_diagnostic_fix.CS0120.enabled = true
 
 # CS0123: No overload for 'method' matches delegate 'delegate'
-roslynator_fix.CS0123.enabled = true
+roslynator_compiler_diagnostic_fix.CS0123.enabled = true
 
 # CS0126: An object of a type convertible to 'type' is required
-roslynator_fix.CS0126.enabled = true
+roslynator_compiler_diagnostic_fix.CS0126.enabled = true
 
 # CS0127: Since 'function' returns void, a return keyword must not be followed by an object expression
-roslynator_fix.CS0127.enabled = true
+roslynator_compiler_diagnostic_fix.CS0127.enabled = true
 
 # CS0128: A local variable named 'variable' is already defined in this scope
-roslynator_fix.CS0128.enabled = true
+roslynator_compiler_diagnostic_fix.CS0128.enabled = true
 
 # CS0131: The left-hand side of an assignment must be a variable, property or indexer
-roslynator_fix.CS0131.enabled = true
+roslynator_compiler_diagnostic_fix.CS0131.enabled = true
 
 # CS0132: 'constructor': a static constructor must be parameterless
-roslynator_fix.CS0132.enabled = true
+roslynator_compiler_diagnostic_fix.CS0132.enabled = true
 
 # CS0133: The expression being assigned to 'variable' must be constant
-roslynator_fix.CS0133.enabled = true
+roslynator_compiler_diagnostic_fix.CS0133.enabled = true
 
 # CS0136: A local variable named 'var' cannot be declared in this scope because it would give a different meaning to 'var',
 # which is already used in a 'parent or current/child' scope to denote something else
-roslynator_fix.CS0136.enabled = true
+roslynator_compiler_diagnostic_fix.CS0136.enabled = true
 
 # CS0139: No enclosing loop out of which to break or continue
-roslynator_fix.CS0139.enabled = true
+roslynator_compiler_diagnostic_fix.CS0139.enabled = true
 
 # CS0152: The switch statement contains multiple cases with same label value
-roslynator_fix.CS0152.enabled = true
+roslynator_compiler_diagnostic_fix.CS0152.enabled = true
 
 # CS0161: 'method': not all code paths return a value
-roslynator_fix.CS0161.enabled = true
+roslynator_compiler_diagnostic_fix.CS0161.enabled = true
 
 # CS0162: Unreachable code detected
-roslynator_fix.CS0162.enabled = true
+roslynator_compiler_diagnostic_fix.CS0162.enabled = true
 
 # CS0163: Control cannot fall through from one case label ('label') to another
-roslynator_fix.CS0163.enabled = true
+roslynator_compiler_diagnostic_fix.CS0163.enabled = true
 
 # CS0164: This label has not been referenced
-roslynator_fix.CS0164.enabled = true
+roslynator_compiler_diagnostic_fix.CS0164.enabled = true
 
 # CS0165: Use of unassigned local variable 'name'
-roslynator_fix.CS0165.enabled = true
+roslynator_compiler_diagnostic_fix.CS0165.enabled = true
 
 # CS0168: The variable 'var' is declared but never used
-roslynator_fix.CS0168.enabled = true
+roslynator_compiler_diagnostic_fix.CS0168.enabled = true
 
 # CS0173: Type of conditional expression cannot be determined because there is no implicit conversion between 'class1' and 'class2'
-roslynator_fix.CS0173.enabled = true
+roslynator_compiler_diagnostic_fix.CS0173.enabled = true
 
 # CS0177: The out parameter 'parameter' must be assigned to before control leaves the current method
-roslynator_fix.CS0177.enabled = true
+roslynator_compiler_diagnostic_fix.CS0177.enabled = true
 
 # CS0191: A readonly field cannot be assigned to (except in a constructor or a variable initializer)
-roslynator_fix.CS0191.enabled = true
+roslynator_compiler_diagnostic_fix.CS0191.enabled = true
 
 # CS0192: Readonly field 'name' cannot be used as ref or out value (except in a constructor)
-roslynator_fix.CS0192.enabled = true
+roslynator_compiler_diagnostic_fix.CS0192.enabled = true
 
 # CS0201: Only assignment, call, increment, decrement, and new object expressions can be used as a statement
-roslynator_fix.CS0201.enabled = true
+roslynator_compiler_diagnostic_fix.CS0201.enabled = true
 
 # CS0214: Pointers and fixed size buffers may only be used in an unsafe context
-roslynator_fix.CS0214.enabled = true
+roslynator_compiler_diagnostic_fix.CS0214.enabled = true
 
 # CS0216: The operator 'operator' requires a matching operator 'missing_operator' to also be defined
-roslynator_fix.CS0216.enabled = true
+roslynator_compiler_diagnostic_fix.CS0216.enabled = true
 
 # CS0219: The variable 'variable' is assigned but its value is never used
-roslynator_fix.CS0219.enabled = true
+roslynator_compiler_diagnostic_fix.CS0219.enabled = true
 
 # CS0221: Constant value 'value' cannot be converted to a 'type' (use 'unchecked' syntax to override)
-roslynator_fix.CS0221.enabled = true
+roslynator_compiler_diagnostic_fix.CS0221.enabled = true
 
 # CS0225: The params parameter must be a single dimensional array
-roslynator_fix.CS0225.enabled = true
+roslynator_compiler_diagnostic_fix.CS0225.enabled = true
 
 # CS0238: 'identifier' cannot be sealed because it is not an override
-roslynator_fix.CS0238.enabled = true
+roslynator_compiler_diagnostic_fix.CS0238.enabled = true
 
 # CS0246: The type or namespace name 'type/namespace' could not be found (are you missing a using directive or an assembly reference?)
-roslynator_fix.CS0246.enabled = true
+roslynator_compiler_diagnostic_fix.CS0246.enabled = true
 
 # CS0260: Missing partial modifier on declaration of type 'type'; another partial declaration of this type exists
-roslynator_fix.CS0260.enabled = true
+roslynator_compiler_diagnostic_fix.CS0260.enabled = true
 
 # CS0262: Partial declarations of 'type' have conflicting accessibility modifiers
-roslynator_fix.CS0262.enabled = true
+roslynator_compiler_diagnostic_fix.CS0262.enabled = true
 
 # CS0266: Cannot implicitly convert type 'type1' to 'type2'. An explicit conversion exists (are you missing a cast?)
-roslynator_fix.CS0266.enabled = true
+roslynator_compiler_diagnostic_fix.CS0266.enabled = true
 
 # CS0267: The partial modifier can only appear immediately before 'class', 'struct', or 'interface'
-roslynator_fix.CS0267.enabled = true
+roslynator_compiler_diagnostic_fix.CS0267.enabled = true
 
 # CS0275: 'accessor': accessibility modifiers may not be used on accessors in an interface
-roslynator_fix.CS0275.enabled = true
+roslynator_compiler_diagnostic_fix.CS0275.enabled = true
 
 # CS0305: Using the generic type 'generic type' requires 'number' type arguments
-roslynator_fix.CS0305.enabled = true
+roslynator_compiler_diagnostic_fix.CS0305.enabled = true
 
 # CS0401: The new() constraint must be the last constraint specified
-roslynator_fix.CS0401.enabled = true
+roslynator_compiler_diagnostic_fix.CS0401.enabled = true
 
 # CS0403: Cannot convert null to type parameter 'name' because it could be a non-nullable value type. Consider using default('T') instead
-roslynator_fix.CS0403.enabled = true
+roslynator_compiler_diagnostic_fix.CS0403.enabled = true
 
 # CS0405: Duplicate constraint 'constraint' for type parameter 'type parameter'
-roslynator_fix.CS0405.enabled = true
+roslynator_compiler_diagnostic_fix.CS0405.enabled = true
 
 # CS0407: 'return-type method' has the wrong return type
-roslynator_fix.CS0407.enabled = true
+roslynator_compiler_diagnostic_fix.CS0407.enabled = true
 
 # CS0409: A constraint clause has already been specified for type parameter 'type parameter'. All of the constraints for a
 # type parameter must be specified in a single where clause
-roslynator_fix.CS0409.enabled = true
+roslynator_compiler_diagnostic_fix.CS0409.enabled = true
 
 # CS0428: Cannot convert method group 'identifier' to non-delegate type 'type'. Did you intend to invoke the method?
-roslynator_fix.CS0428.enabled = true
+roslynator_compiler_diagnostic_fix.CS0428.enabled = true
 
 # CS0441: 'class': a class cannot be both static and sealed
-roslynator_fix.CS0441.enabled = true
+roslynator_compiler_diagnostic_fix.CS0441.enabled = true
 
 # CS0442: 'property': abstract properties cannot have private accessors
-roslynator_fix.CS0442.enabled = true
+roslynator_compiler_diagnostic_fix.CS0442.enabled = true
 
 # CS0449: The 'class' or 'struct' constraint must come before any other constraints
-roslynator_fix.CS0449.enabled = true
+roslynator_compiler_diagnostic_fix.CS0449.enabled = true
 
 # CS0450: 'type parameter name': cannot specify both a constraint class and the 'class' or 'struct' constraint
-roslynator_fix.CS0450.enabled = true
+roslynator_compiler_diagnostic_fix.CS0450.enabled = true
 
 # CS0451: The 'new()' constraint cannot be used with the 'struct' constraint
-roslynator_fix.CS0451.enabled = true
+roslynator_compiler_diagnostic_fix.CS0451.enabled = true
 
 # CS0472: The result of the expression is always 'value1' since a value of type 'value2' is never equal to 'null' of type 'value3'
-roslynator_fix.CS0472.enabled = true
+roslynator_compiler_diagnostic_fix.CS0472.enabled = true
 
 # CS0500: 'class member' cannot declare a body because it is marked abstract
-roslynator_fix.CS0500.enabled = true
+roslynator_compiler_diagnostic_fix.CS0500.enabled = true
 
 # CS0501: 'member function' must declare a body because it is not marked abstract, extern, or partial
-roslynator_fix.CS0501.enabled = true
+roslynator_compiler_diagnostic_fix.CS0501.enabled = true
 
 # CS0507: 'function1': cannot change access modifiers when overriding 'access' inherited member 'function2'
-roslynator_fix.CS0507.enabled = true
+roslynator_compiler_diagnostic_fix.CS0507.enabled = true
 
 # CS0508: 'type1': return type must be 'type2' to match overridden member 'member name'
-roslynator_fix.CS0508.enabled = true
+roslynator_compiler_diagnostic_fix.CS0508.enabled = true
 
 # CS0513: 'function' is abstract but it is contained in nonabstract class 'class'
-roslynator_fix.CS0513.enabled = true
+roslynator_compiler_diagnostic_fix.CS0513.enabled = true
 
 # CS0515: 'function': access modifiers are not allowed on static constructors
-roslynator_fix.CS0515.enabled = true
+roslynator_compiler_diagnostic_fix.CS0515.enabled = true
 
 # CS0525: Interfaces cannot contain fields
-roslynator_fix.CS0525.enabled = true
+roslynator_compiler_diagnostic_fix.CS0525.enabled = true
 
 # CS0527: Type 'type' in interface list is not an interface
-roslynator_fix.CS0527.enabled = true
+roslynator_compiler_diagnostic_fix.CS0527.enabled = true
 
 # CS0531: 'member': interface members cannot have a definition
-roslynator_fix.CS0531.enabled = true
+roslynator_compiler_diagnostic_fix.CS0531.enabled = true
 
 # CS0539: 'member' in explicit interface declaration is not a member of interface
-roslynator_fix.CS0539.enabled = true
+roslynator_compiler_diagnostic_fix.CS0539.enabled = true
 
 # CS0541: 'declaration': explicit interface declaration can only be declared in a class or struct
-roslynator_fix.CS0541.enabled = true
+roslynator_compiler_diagnostic_fix.CS0541.enabled = true
 
 # CS0549: New virtual member in sealed class
-roslynator_fix.CS0549.enabled = true
+roslynator_compiler_diagnostic_fix.CS0549.enabled = true
 
 # CS0558: User-defined operator 'operator' must be declared static and public
-roslynator_fix.CS0558.enabled = true
+roslynator_compiler_diagnostic_fix.CS0558.enabled = true
 
 # CS0567: Interfaces cannot contain operators
-roslynator_fix.CS0567.enabled = true
+roslynator_compiler_diagnostic_fix.CS0567.enabled = true
 
 # CS0568: Structs cannot contain explicit parameterless constructors
-roslynator_fix.CS0568.enabled = true
+roslynator_compiler_diagnostic_fix.CS0568.enabled = true
 
 # CS0573: 'field declaration': cannot have instance field initializers in structs
-roslynator_fix.CS0573.enabled = true
+roslynator_compiler_diagnostic_fix.CS0573.enabled = true
 
 # CS0574: Name of destructor must match name of class
-roslynator_fix.CS0574.enabled = true
+roslynator_compiler_diagnostic_fix.CS0574.enabled = true
 
 # CS0575: Only class types can contain destructors
-roslynator_fix.CS0575.enabled = true
+roslynator_compiler_diagnostic_fix.CS0575.enabled = true
 
 # CS0579: Duplicate 'attribute' attribute
-roslynator_fix.CS0579.enabled = true
+roslynator_compiler_diagnostic_fix.CS0579.enabled = true
 
 # CS0592: Attribute 'attribute' is not valid on this declaration type. It is valid on 'type' declarations only
-roslynator_fix.CS0592.enabled = true
+roslynator_compiler_diagnostic_fix.CS0592.enabled = true
 
 # CS0621: 'member': virtual or abstract members cannot be private
-roslynator_fix.CS0621.enabled = true
+roslynator_compiler_diagnostic_fix.CS0621.enabled = true
 
 # CS0628: member' : new protected member declared in sealed class
-roslynator_fix.CS0628.enabled = true
+roslynator_compiler_diagnostic_fix.CS0628.enabled = true
 
 # CS0659: 'class' overrides Object.Equals(object o) but does not override Object.GetHashCode()
-roslynator_fix.CS0659.enabled = true
+roslynator_compiler_diagnostic_fix.CS0659.enabled = true
 
 # CS0660: 'class' defines operator == or operator != but does not override Object.Equals(object o)
-roslynator_fix.CS0660.enabled = true
+roslynator_compiler_diagnostic_fix.CS0660.enabled = true
 
 # CS0661: 'class' defines operator == or operator != but does not override Object.GetHashCode()
-roslynator_fix.CS0661.enabled = true
+roslynator_compiler_diagnostic_fix.CS0661.enabled = true
 
 # CS0678: 'variable': a field can not be both volatile and readonly
-roslynator_fix.CS0678.enabled = true
+roslynator_compiler_diagnostic_fix.CS0678.enabled = true
 
 # CS0693: Type parameter 'type parameter' has the same name as the type parameter from outer type 'type'
-roslynator_fix.CS0693.enabled = true
+roslynator_compiler_diagnostic_fix.CS0693.enabled = true
 
 # CS0708: 'field': cannot declare instance members in a static class
-roslynator_fix.CS0708.enabled = true
+roslynator_compiler_diagnostic_fix.CS0708.enabled = true
 
 # CS0710: Static classes cannot have instance constructors
-roslynator_fix.CS0710.enabled = true
+roslynator_compiler_diagnostic_fix.CS0710.enabled = true
 
 # CS0713: Static class 'static type' cannot derive from type 'type'. Static classes must derive from object
-roslynator_fix.CS0713.enabled = true
+roslynator_compiler_diagnostic_fix.CS0713.enabled = true
 
 # CS0714: Static class cannot implement interfaces
-roslynator_fix.CS0714.enabled = true
+roslynator_compiler_diagnostic_fix.CS0714.enabled = true
 
 # CS0718: 'type': static types cannot be used as type arguments
-roslynator_fix.CS0718.enabled = true
+roslynator_compiler_diagnostic_fix.CS0718.enabled = true
 
 # CS0750: A partial method cannot have access modifiers or the virtual, abstract, override, new, sealed, or extern modifiers
-roslynator_fix.CS0750.enabled = true
+roslynator_compiler_diagnostic_fix.CS0750.enabled = true
 
 # CS0751: A partial method must be declared in a partial class or partial struct
-roslynator_fix.CS0751.enabled = true
+roslynator_compiler_diagnostic_fix.CS0751.enabled = true
 
 # CS0753: Only methods, classes, structs, or interfaces may be partial
-roslynator_fix.CS0753.enabled = true
+roslynator_compiler_diagnostic_fix.CS0753.enabled = true
 
 # CS0756: A partial method may not have multiple defining declarations
-roslynator_fix.CS0756.enabled = true
+roslynator_compiler_diagnostic_fix.CS0756.enabled = true
 
 # CS0759: No defining declaration found for implementing declaration of partial method 'method'
-roslynator_fix.CS0759.enabled = true
+roslynator_compiler_diagnostic_fix.CS0759.enabled = true
 
 # CS0766: Partial methods must have a void return type
-roslynator_fix.CS0766.enabled = true
+roslynator_compiler_diagnostic_fix.CS0766.enabled = true
 
 # CS0815: Cannot assign 'expression' to an implicitly typed local
-roslynator_fix.CS0815.enabled = true
+roslynator_compiler_diagnostic_fix.CS0815.enabled = true
 
 # CS0819: Implicitly typed locals cannot have multiple declarators
-roslynator_fix.CS0819.enabled = true
+roslynator_compiler_diagnostic_fix.CS0819.enabled = true
 
 # CS0822: Implicitly typed locals cannot be const
-roslynator_fix.CS0822.enabled = true
+roslynator_compiler_diagnostic_fix.CS0822.enabled = true
 
 # CS1003: Syntax error, 'char' expected
-roslynator_fix.CS1003.enabled = true
+roslynator_compiler_diagnostic_fix.CS1003.enabled = true
 
 # CS1004: Duplicate 'modifier' modifier
-roslynator_fix.CS1004.enabled = true
+roslynator_compiler_diagnostic_fix.CS1004.enabled = true
 
 # CS1012: Too many characters in character literal
-roslynator_fix.CS1012.enabled = true
+roslynator_compiler_diagnostic_fix.CS1012.enabled = true
 
 # CS1023: Embedded statement cannot be a declaration or labeled statement
-roslynator_fix.CS1023.enabled = true
+roslynator_compiler_diagnostic_fix.CS1023.enabled = true
 
 # CS1031: Type expected
-roslynator_fix.CS1031.enabled = true
+roslynator_compiler_diagnostic_fix.CS1031.enabled = true
 
 # CS1057: 'member': static classes cannot contain protected members
-roslynator_fix.CS1057.enabled = true
+roslynator_compiler_diagnostic_fix.CS1057.enabled = true
 
 # CS1061: 'type' does not contain a definition for 'member' and no extension method 'name' accepting a first argument of type 'type'
 # could be found (are you missing a using directive or an assembly reference?)
-roslynator_fix.CS1061.enabled = true
+roslynator_compiler_diagnostic_fix.CS1061.enabled = true
 
 # CS1100: Method 'name' has a parameter modifier 'this' which is not on the first parameter
-roslynator_fix.CS1100.enabled = true
+roslynator_compiler_diagnostic_fix.CS1100.enabled = true
 
 # CS1105: Extension methods must be static
-roslynator_fix.CS1105.enabled = true
+roslynator_compiler_diagnostic_fix.CS1105.enabled = true
 
 # CS1106: Extension methods must be defined in a non-generic static class
-roslynator_fix.CS1106.enabled = true
+roslynator_compiler_diagnostic_fix.CS1106.enabled = true
 
 # CS1503: Argument 'number' cannot convert from 'type1' to 'type2'
-roslynator_fix.CS1503.enabled = true
+roslynator_compiler_diagnostic_fix.CS1503.enabled = true
 
 # CS1522: Empty switch block
-roslynator_fix.CS1522.enabled = true
+roslynator_compiler_diagnostic_fix.CS1522.enabled = true
 
 # CS1526: A new expression requires (), [], or {} after type
-roslynator_fix.CS1526.enabled = true
+roslynator_compiler_diagnostic_fix.CS1526.enabled = true
 
 # CS1527: Elements defined in a namespace cannot be explicitly declared as private, protected, protected internal or private protected
-roslynator_fix.CS1527.enabled = true
+roslynator_compiler_diagnostic_fix.CS1527.enabled = true
 
 # CS1591: Missing XML comment for publicly visible type or member 'name'
-roslynator_fix.CS1591.enabled = true
+roslynator_compiler_diagnostic_fix.CS1591.enabled = true
 
 # CS1597: Semicolon after method or accessor block is not valid
-roslynator_fix.CS1597.enabled = true
+roslynator_compiler_diagnostic_fix.CS1597.enabled = true
 
 # CS1609: Modifiers cannot be placed on event accessor declarations
-roslynator_fix.CS1609.enabled = true
+roslynator_compiler_diagnostic_fix.CS1609.enabled = true
 
 # CS1615: Argument 'number' should not be passed with the 'keyword' keyword
-roslynator_fix.CS1615.enabled = true
+roslynator_compiler_diagnostic_fix.CS1615.enabled = true
 
 # CS1620: Argument 'number' must be passed with the 'keyword' keyword
-roslynator_fix.CS1620.enabled = true
+roslynator_compiler_diagnostic_fix.CS1620.enabled = true
 
 # CS1621: The yield statement cannot be used inside an anonymous method or lambda expression
-roslynator_fix.CS1621.enabled = true
+roslynator_compiler_diagnostic_fix.CS1621.enabled = true
 
 # CS1622: Cannot return a value from an iterator. Use the yield return statement to return a value, or yield break to end the iteration
-roslynator_fix.CS1622.enabled = true
+roslynator_compiler_diagnostic_fix.CS1622.enabled = true
 
 # CS1623: Iterators cannot have ref or out parameters
-roslynator_fix.CS1623.enabled = true
+roslynator_compiler_diagnostic_fix.CS1623.enabled = true
 
 # CS1624: The body of 'identifier' cannot be an iterator block because 'type' is not an iterator interface type
-roslynator_fix.CS1624.enabled = true
+roslynator_compiler_diagnostic_fix.CS1624.enabled = true
 
 # CS1643: Not all code paths return a value in method of type 'type'
-roslynator_fix.CS1643.enabled = true
+roslynator_compiler_diagnostic_fix.CS1643.enabled = true
 
 # CS1674: 'T': type used in a using statement must be implicitly convertible to 'System.IDisposable'
-roslynator_fix.CS1674.enabled = true
+roslynator_compiler_diagnostic_fix.CS1674.enabled = true
 
 # CS1689: Attribute 'attribute' is only valid on methods or attribute classes
-roslynator_fix.CS1689.enabled = true
+roslynator_compiler_diagnostic_fix.CS1689.enabled = true
 
 # CS1715: 'type1': type must be 'type2' to match overridden member 'member'
-roslynator_fix.CS1715.enabled = true
+roslynator_compiler_diagnostic_fix.CS1715.enabled = true
 
 # CS1717: Assignment made to same variable; did you mean to assign something else?
-roslynator_fix.CS1717.enabled = true
+roslynator_compiler_diagnostic_fix.CS1717.enabled = true
 
 # CS1722: Base class 'class' must come before any interfaces
-roslynator_fix.CS1722.enabled = true
+roslynator_compiler_diagnostic_fix.CS1722.enabled = true
 
 # CS1737: Optional parameters must appear after all required parameters
-roslynator_fix.CS1737.enabled = true
+roslynator_compiler_diagnostic_fix.CS1737.enabled = true
 
 # CS1741: A ref or out parameter cannot have a default value
-roslynator_fix.CS1741.enabled = true
+roslynator_compiler_diagnostic_fix.CS1741.enabled = true
 
 # CS1743: Cannot specify a default value for the 'this' parameter
-roslynator_fix.CS1743.enabled = true
+roslynator_compiler_diagnostic_fix.CS1743.enabled = true
 
 # CS1750: A value of type 'type1' cannot be used as a default parameter because there are no standard conversions to type 'type2
-roslynator_fix.CS1750.enabled = true
+roslynator_compiler_diagnostic_fix.CS1750.enabled = true
 
 # CS1751: Cannot specify a default value for a parameter array
-roslynator_fix.CS1751.enabled = true
+roslynator_compiler_diagnostic_fix.CS1751.enabled = true
 
 # CS1955: Non-invocable member 'name' cannot be used like a method
-roslynator_fix.CS1955.enabled = true
+roslynator_compiler_diagnostic_fix.CS1955.enabled = true
 
 # CS1983: The return type of an async method must be void, Task or Task<T>
-roslynator_fix.CS1983.enabled = true
+roslynator_compiler_diagnostic_fix.CS1983.enabled = true
 
 # CS1988: Async methods cannot have ref or out parameters
-roslynator_fix.CS1988.enabled = true
+roslynator_compiler_diagnostic_fix.CS1988.enabled = true
 
 # CS1994: The 'async' modifier can only be used in methods that have a body
-roslynator_fix.CS1994.enabled = true
+roslynator_compiler_diagnostic_fix.CS1994.enabled = true
 
 # CS1997: Since 'RemoveReturnKeywordOrReturnExpression.FooAsync()' is an async method that returns 'Task', a return keyword must not
 # be followed by an object expression. Did you intend to return 'Task<T>'?
-roslynator_fix.CS1997.enabled = true
+roslynator_compiler_diagnostic_fix.CS1997.enabled = true
 
 # CS3000: Methods with variable arguments are not CLS-compliant
-roslynator_fix.CS3000.enabled = true
+roslynator_compiler_diagnostic_fix.CS3000.enabled = true
 
 # CS3001: Argument type 'type' is not CLS-compliant
-roslynator_fix.CS3001.enabled = true
+roslynator_compiler_diagnostic_fix.CS3001.enabled = true
 
 # CS3002: Return type of 'method' is not CLS-compliant
-roslynator_fix.CS3002.enabled = true
+roslynator_compiler_diagnostic_fix.CS3002.enabled = true
 
 # CS3003: Type of 'variable' is not CLS-compliant
-roslynator_fix.CS3003.enabled = true
+roslynator_compiler_diagnostic_fix.CS3003.enabled = true
 
 # CS3005: Identifier 'identifier' differing only in case is not CLS-compliant
-roslynator_fix.CS3005.enabled = true
+roslynator_compiler_diagnostic_fix.CS3005.enabled = true
 
 # CS3006: Overloaded method 'method' differing only in ref or out, or in array rank, is not CLS-compliant
-roslynator_fix.CS3006.enabled = true
+roslynator_compiler_diagnostic_fix.CS3006.enabled = true
 
 # CS3007: Overloaded method 'method' differing only by unnamed array types is not CLS-compliant
-roslynator_fix.CS3007.enabled = true
+roslynator_compiler_diagnostic_fix.CS3007.enabled = true
 
 # CS3008: Identifier 'identifier' is not CLS-compliant
-roslynator_fix.CS3008.enabled = true
+roslynator_compiler_diagnostic_fix.CS3008.enabled = true
 
 # CS3009: Base type 'type' is not CLS-compliant
-roslynator_fix.CS3009.enabled = true
+roslynator_compiler_diagnostic_fix.CS3009.enabled = true
 
 # CS3016: Arrays as attribute arguments is not CLS-compliant
-roslynator_fix.CS3016.enabled = true
+roslynator_compiler_diagnostic_fix.CS3016.enabled = true
 
 # CS3024: Constraint type 'type' is not CLS-compliant
-roslynator_fix.CS3024.enabled = true
+roslynator_compiler_diagnostic_fix.CS3024.enabled = true
 
 # CS3027: 'type_1' is not CLS-compliant because base interface 'type_2' is not CLS-compliant
-roslynator_fix.CS3027.enabled = true
+roslynator_compiler_diagnostic_fix.CS3027.enabled = true
 
 # CS7036: There is no argument given that corresponds to the required formal parameter 'parameter' of 'member'
-roslynator_fix.CS7036.enabled = true
+roslynator_compiler_diagnostic_fix.CS7036.enabled = true
 
 # CS8050: Only auto-implemented properties can have initializers
-roslynator_fix.CS8050.enabled = true
+roslynator_compiler_diagnostic_fix.CS8050.enabled = true
 
 # CS8070: Control cannot fall out of switch from final case label ('default')
-roslynator_fix.CS8070.enabled = true
+roslynator_compiler_diagnostic_fix.CS8070.enabled = true
 
 # CS8112: 'function' is a local function and must therefore always have a body
-roslynator_fix.CS8112.enabled = true
+roslynator_compiler_diagnostic_fix.CS8112.enabled = true
 
 # CS8139: Cannot change tuple element names when overriding inherited member
-roslynator_fix.CS8139.enabled = true
+roslynator_compiler_diagnostic_fix.CS8139.enabled = true
 
 # CS8340: Instance fields of read-only structs must be read-only
-roslynator_fix.CS8340.enabled = true
+roslynator_compiler_diagnostic_fix.CS8340.enabled = true
 
 # CS8403: Method with an iterator block must be 'async' to return 'IAsyncEnumerable<T>'
-roslynator_fix.CS8403.enabled = true
+roslynator_compiler_diagnostic_fix.CS8403.enabled = true
 
 # CS8600: Converting null literal or possible null value to non-nullable type
-roslynator_fix.CS8600.enabled = true
+roslynator_compiler_diagnostic_fix.CS8600.enabled = true
 
 # CS8602: Dereference of a possibly null reference
-roslynator_fix.CS8602.enabled = true
+roslynator_compiler_diagnostic_fix.CS8602.enabled = true
 
 # CS8604: Possible null reference argument for parameter
-roslynator_fix.CS8604.enabled = true
+roslynator_compiler_diagnostic_fix.CS8604.enabled = true
 
 # CS8610: Nullability of reference types in type of parameter doesn't match overridden member
-roslynator_fix.CS8610.enabled = true
+roslynator_compiler_diagnostic_fix.CS8610.enabled = true
 
 # CS8618: Non-nullable member is uninitialized. Consider declaring the member as nullable
-roslynator_fix.CS8618.enabled = true
+roslynator_compiler_diagnostic_fix.CS8618.enabled = true
 
 # CS8625: Cannot convert null literal to non-nullable reference type
-roslynator_fix.CS8625.enabled = true
+roslynator_compiler_diagnostic_fix.CS8625.enabled = true
 
 # CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context
-roslynator_fix.CS8632.enabled = true
+roslynator_compiler_diagnostic_fix.CS8632.enabled = true
 
 # CS8765: Nullability of type of parameter doesn't match overridden member
-roslynator_fix.CS8765.enabled = true
+roslynator_compiler_diagnostic_fix.CS8765.enabled = true
 
 # CS8767: Nullability of reference types in type of parameter doesn't match implicitly implemented member
-roslynator_fix.CS8767.enabled = true
+roslynator_compiler_diagnostic_fix.CS8767.enabled = true
 
 # ═══════════════════════════════ IDE-only rules ═══════════════════════════════
 
