@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.0.7] - 2025-07-05
+
+### Added
+
+- Prettier plugin: multiline-arrays
+
+### Fixed
+
+- Conflicting Roslynator formatting rules
+
+## [1.0.6] - 2025-07-05
+
+### Fixed
+
+- Incorrect Roslynator property names
+- ECC conflicts with indent size in wrapper/chopped statements
+
 ## [1.0.5] - 2025-07-04
 
 ### Added
