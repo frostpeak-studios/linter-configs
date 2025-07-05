@@ -9,10 +9,14 @@
     "Disable": {
         "EndOfLine": false,
         "Indentation": false,
-        "IndentSize": false,
+        "IndentSize": true,
         "InsertFinalNewline": false,
         "TrimTrailingWhitespace": false,
         "MaxLineLength": false
     },
-    "Exclude": ["\\.sln$", "\\.XamlStyler$", "/valestyles/"]
+    "Exclude": [
+        "\\.sln$",
+        "\\.XamlStyler$",
+        "/valestyles/"
+    ]
 }
