@@ -9,3 +9,9 @@ printWidth: 80
 bracketSpacing: true
 trailingComma: "all"
 arrowParens: "always"
+multilineArraysWrapThreshold: -1
+# Use an absolute path to the global installation of the plugins.
+# This is because some projects aren't npm/js-based, and we don't
+# want to add irrelevant package.json and node_modules to them.
+plugins:
+  - "/usr/local/lib/node_modules/prettier-plugin-multiline-arrays/dist/index.js"

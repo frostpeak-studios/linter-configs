@@ -2112,10 +2112,14 @@ dotnet_diagnostic.RCS0051.severity = suggestion
 dotnet_diagnostic.RCS0052.severity = suggestion
 
 # RCS0053: Fix formatting of a list
-dotnet_diagnostic.RCS0053.severity = suggestion
+# Justification: Prefer to align an args list with the opening parenthesis,
+# but this rule will force them to outdent from that parenthesis.
+dotnet_diagnostic.RCS0053.severity = silent
 
 # RCS0054: Fix formatting of a call chain
-dotnet_diagnostic.RCS0054.severity = suggestion
+# Justification: Prefer to align call chains at '.' but this rule
+# will force them to outdent from that period.
+dotnet_diagnostic.RCS0054.severity = silent
 
 # RCS0055: Fix formatting of a binary expression chain
 dotnet_diagnostic.RCS0055.severity = suggestion
